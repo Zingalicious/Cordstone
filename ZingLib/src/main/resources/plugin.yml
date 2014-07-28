@@ -1,0 +1,6 @@
+main: us.zingalicio.zinglib.ZingLib
+name: ZingLib
+version: ${project.version}
+description: ${project.description}
+author: zingten11
+database: false
