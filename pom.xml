@@ -4,9 +4,16 @@
   <artifactId>ZingLib</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>ZingLib</name>
+  
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+  <configuration>
+    <source>1.7</source>
+    <target>1.7</target>
+  </configuration>
+        
   <description>Zingalicious' Core Plugin</description>
       <repositories>
         <repository>
