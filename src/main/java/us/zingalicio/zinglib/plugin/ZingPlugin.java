@@ -6,7 +6,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import us.zingalicio.zinglib.ZingLib;
-import us.zingalicio.zinglib.configuration.ConfigHandler;
+import us.zingalicio.zinglib.util.ConfigUtil;
 
 public abstract class ZingPlugin extends JavaPlugin
 {
@@ -23,16 +23,16 @@ public abstract class ZingPlugin extends JavaPlugin
 		
 		if(this instanceof ZingLib)
 		{
-			ConfigHandler.saveDefault(this, configFile);
-			ConfigHandler.saveDefault(this, materialFile);
+			ConfigUtil.saveDefault(this, configFile);
+			ConfigUtil.saveDefault(this, materialFile);
 		}
 		
 		materials = new YamlConfiguration();
 		config = new YamlConfiguration();
 		
 		
-		ConfigHandler.loadYaml(materials, materialFile);
-		ConfigHandler.loadYaml(config, configFile);
+		ConfigUtil.loadYaml(materials, materialFile);
+		ConfigUtil.loadYaml(config, configFile);
 	}
 
 	public YamlConfiguration getMaterials()

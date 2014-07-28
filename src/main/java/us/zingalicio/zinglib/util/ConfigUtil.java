@@ -1,4 +1,4 @@
-package us.zingalicio.zinglib.configuration;
+package us.zingalicio.zinglib.util;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -8,7 +8,7 @@ import java.io.OutputStream;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class ConfigHandler 
+public class ConfigUtil 
 {
 	public static void loadYaml(YamlConfiguration yaml, File file)
 	{
