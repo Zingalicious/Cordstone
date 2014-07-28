@@ -5,6 +5,8 @@ import java.util.List;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
+import us.zingalicio.zinglib.plugin.ZingPlugin;
+
 public final class MessageUtil 
 {
 	private static final int PAGE_LENGTH = 7;
@@ -40,12 +42,12 @@ public final class MessageUtil
 		}
 	}
 	
-	public static void sendMessage(CommandSender sender, String message)
+	public static void sendMessage(ZingPlugin plugin, CommandSender sender, String message)
 	{
-		sender.sendMessage(ChatColor.GOLD + "[Handlefish] " + ChatColor.YELLOW + message);
+		sender.sendMessage(plugin.nameColour + "[" + plugin.name + "] " + plugin.textColour + message);
 	}
-	public static void sendError(CommandSender sender, String message)
+	public static void sendError(ZingPlugin plugin, CommandSender sender, String message)
 	{
-		sender.sendMessage(ChatColor.DARK_RED + "[Handlefish] " + ChatColor.RED + message);
+		sender.sendMessage(ChatColor.DARK_RED + "[" + plugin.name + "] " + ChatColor.RED + message);
 	}
 }

@@ -2,6 +2,7 @@ package us.zingalicio.zinglib.plugin;
 
 import java.io.File;
 
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -15,11 +16,18 @@ public abstract class ZingPlugin extends JavaPlugin
 	
 	protected final File materialFile;
 	protected final File configFile;
+
+	public final String name;
+	public ChatColor nameColour = ChatColor.GOLD;
+	public ChatColor textColour = ChatColor.YELLOW;
 	
 	public ZingPlugin()
 	{
 		materialFile = new File("plugins/common/materials.yml");
 		configFile = new File(this.getDataFolder() + "config.yml");
+		
+		materials = new YamlConfiguration();
+		config = new YamlConfiguration();
 		
 		if(this instanceof ZingLib)
 		{
@@ -27,9 +35,7 @@ public abstract class ZingPlugin extends JavaPlugin
 			ConfigUtil.saveDefault(this, materialFile);
 		}
 		
-		materials = new YamlConfiguration();
-		config = new YamlConfiguration();
-		
+		name = this.getName();
 		
 		ConfigUtil.loadYaml(materials, materialFile);
 		ConfigUtil.loadYaml(config, configFile);
