@@ -24,7 +24,7 @@ public abstract class ZingPlugin extends JavaPlugin
 	public ZingPlugin()
 	{
 		materialFile = new File("plugins/common/materials.yml");
-		configFile = new File(this.getDataFolder() + "config.yml");
+		configFile = new File(this.getDataFolder() + "/config.yml");
 		
 		materials = new YamlConfiguration();
 		config = new YamlConfiguration();
