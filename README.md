@@ -1,0 +1,4 @@
+ZingLib
+=======
+
+Zingalicious' Core Plugin
