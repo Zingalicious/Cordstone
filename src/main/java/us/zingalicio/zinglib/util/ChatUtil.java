@@ -99,7 +99,7 @@ public class ChatUtil
 		PermissionUser user = PermissionsEx.getUser(player);
 		message = message.replace("%prefix", user.getPrefix());
 		message = message.replace("%suffix", user.getSuffix());
-		if(PermissionsUtil.silentCheckPermission(player, "chat.color"))
+		if(PermissionsUtil.checkPermission(player, "chat.color", true))
 		{
 			message = message.replace("&0", ChatColor.BLACK.toString());
 			message = message.replace("&1", ChatColor.DARK_BLUE.toString());
@@ -137,7 +137,7 @@ public class ChatUtil
 			message = message.replace("&e", "");
 			message = message.replace("&f", "");
 		}
-		if(PermissionsUtil.silentCheckPermission(player, "chat.magic"))
+		if(PermissionsUtil.checkPermission(player, "chat.magic", true))
 		{
 			message = message.replace("&k", ChatColor.MAGIC.toString());
 		}
@@ -145,7 +145,7 @@ public class ChatUtil
 		{
 			message = message.replace("&k", "");
 		}
-		if(PermissionsUtil.silentCheckPermission(player, "chat.bold"))
+		if(PermissionsUtil.checkPermission(player, "chat.bold", true))
 		{
 			message = message.replace("&l", ChatColor.BOLD.toString());
 		}
@@ -153,7 +153,7 @@ public class ChatUtil
 		{
 			message = message.replace("&l", "");
 		}
-		if(PermissionsUtil.silentCheckPermission(player, "chat.lines"))
+		if(PermissionsUtil.checkPermission(player, "chat.lines", true))
 		{
 			message = message.replace("&m", ChatColor.STRIKETHROUGH.toString());
 			message = message.replace("&n", ChatColor.UNDERLINE.toString());
@@ -163,7 +163,7 @@ public class ChatUtil
 			message = message.replace("&m", "");
 			message = message.replace("&n", "");
 		}
-		if(PermissionsUtil.silentCheckPermission(player, "chat.italic"))
+		if(PermissionsUtil.checkPermission(player, "chat.italic", true))
 		{
 			message = message.replace("&o", ChatColor.ITALIC.toString());
 		}

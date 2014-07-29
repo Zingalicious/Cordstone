@@ -5,7 +5,7 @@ import org.bukkit.command.CommandSender;
 
 public class PermissionsUtil 
 {
-	public static boolean checkPermission(CommandSender sender, String permission)
+	public static boolean checkPermission(CommandSender sender, String permission, Boolean silent)
 	{
 		if(sender.hasPermission("handlefish." + permission) | sender.isOp())
 		{
@@ -13,19 +13,10 @@ public class PermissionsUtil
 		}
 		else
 		{
-			sender.sendMessage(ChatColor.RED + "You do not have permission to do this.");
-			return false;
-		}
-	}
-	
-	public static boolean silentCheckPermission(CommandSender sender, String permission)
-	{
-		if(sender.hasPermission("handlefish." + permission) | sender.isOp())
-		{
-			return true;
-		}
-		else
-		{
+			if(!silent)
+			{
+				sender.sendMessage(ChatColor.RED + "You do not have permission to do this.");
+			}
 			return false;
 		}
 	}
