@@ -31,9 +31,9 @@ public abstract class ZingPlugin extends JavaPlugin
 		
 		if(this instanceof ZingLib)
 		{
-			ConfigUtil.saveDefault(this, configFile);
 			ConfigUtil.saveDefault(this, materialFile);
 		}
+		ConfigUtil.saveDefault(this, configFile);
 		
 		name = this.getName();
 		
