@@ -7,7 +7,7 @@ public class PermissionsUtil
 {
 	public static boolean checkPermission(CommandSender sender, String permission, Boolean silent)
 	{
-		if(sender.hasPermission("handlefish." + permission) | sender.isOp())
+		if(sender.hasPermission(permission) | sender.isOp())
 		{
 			return true;
 		}

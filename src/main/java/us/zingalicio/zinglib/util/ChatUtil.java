@@ -8,6 +8,8 @@ import ru.tehkode.permissions.bukkit.PermissionsEx;
 
 public class ChatUtil 
 {
+	private final static String CHAT_PLUGIN = "songlantern";
+	
 	public static String getFormattedName(Player player)
 	{
 		String name = player.getDisplayName();
@@ -99,7 +101,7 @@ public class ChatUtil
 		PermissionUser user = PermissionsEx.getUser(player);
 		message = message.replace("%prefix", user.getPrefix());
 		message = message.replace("%suffix", user.getSuffix());
-		if(PermissionsUtil.checkPermission(player, "chat.color", true))
+		if(PermissionsUtil.checkPermission(player, CHAT_PLUGIN + ".chat.format.colors", true))
 		{
 			message = message.replace("&0", ChatColor.BLACK.toString());
 			message = message.replace("&1", ChatColor.DARK_BLUE.toString());
@@ -137,7 +139,7 @@ public class ChatUtil
 			message = message.replace("&e", "");
 			message = message.replace("&f", "");
 		}
-		if(PermissionsUtil.checkPermission(player, "chat.magic", true))
+		if(PermissionsUtil.checkPermission(player, CHAT_PLUGIN + ".chat.format.magic", true))
 		{
 			message = message.replace("&k", ChatColor.MAGIC.toString());
 		}
@@ -145,7 +147,7 @@ public class ChatUtil
 		{
 			message = message.replace("&k", "");
 		}
-		if(PermissionsUtil.checkPermission(player, "chat.bold", true))
+		if(PermissionsUtil.checkPermission(player, CHAT_PLUGIN + ".chat.format.bold", true))
 		{
 			message = message.replace("&l", ChatColor.BOLD.toString());
 		}
@@ -153,7 +155,7 @@ public class ChatUtil
 		{
 			message = message.replace("&l", "");
 		}
-		if(PermissionsUtil.checkPermission(player, "chat.lines", true))
+		if(PermissionsUtil.checkPermission(player, CHAT_PLUGIN + ".chat.format.lines", true))
 		{
 			message = message.replace("&m", ChatColor.STRIKETHROUGH.toString());
 			message = message.replace("&n", ChatColor.UNDERLINE.toString());
@@ -163,7 +165,7 @@ public class ChatUtil
 			message = message.replace("&m", "");
 			message = message.replace("&n", "");
 		}
-		if(PermissionsUtil.checkPermission(player, "chat.italic", true))
+		if(PermissionsUtil.checkPermission(player, CHAT_PLUGIN + ".chat.format.italic", true))
 		{
 			message = message.replace("&o", ChatColor.ITALIC.toString());
 		}
@@ -171,7 +173,14 @@ public class ChatUtil
 		{
 			message = message.replace("&o", "");
 		}
-		message = message.replace("&r", ChatColor.RESET.toString());
+		if(PermissionsUtil.checkPermission(player, CHAT_PLUGIN + ".chat.format.reset", true))
+		{
+			message = message.replace("&r", ChatColor.RESET.toString());
+		}
+		else
+		{
+			message = message.replace("&r", "");
+		}
 		message = message.replace("%player", getFormattedName(player));
 		
 		return message;
