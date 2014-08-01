@@ -1,4 +1,7 @@
-nothing:
-  to:
-    see:
-      here: folks
+items:
+  paintbrush:
+    type: "EMERALD"
+    data: 1
+    displayname: "Paintbrush"
+    lore: 
+
