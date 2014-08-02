@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.bukkit.Material;
+import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
 import org.bukkit.material.MaterialData;
 
 import us.zingalicio.zinglib.plugin.ZingPlugin;
@@ -118,5 +120,14 @@ public class NameUtil
 	    }
 	    name = name.trim();
 	    return name;
+	}
+	
+	public static String getSenderName(CommandSender sender)
+	{
+		if(sender instanceof Player)
+		{
+			return ((Player) sender).getDisplayName();
+		}
+		return sender.getName();
 	}
 }
