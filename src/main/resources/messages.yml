@@ -1,4 +1,6 @@
 messages:
+  GeneralFailure:
+    Self: ["Failed.","An error occurred while you were doing whatever it is you were doing."]
   NoConsole:
     Self: ["Hitler coded nothing wrong!","You fool!","Consoles aren't real people!","You foolish console peasant!"]
   Banned:
@@ -43,10 +45,6 @@ messages:
     Self: ["You've been given %amount %item."]
     ToOther: ["You've given %amount %item to %target."]
     FromOther: ["%sender has given you %amount %item."]
-  More:
-    Self: ["You've refilled your stack of %item."]
-    ToOther: ["You've refilled %target's stack of %item."]
-    FromOther: ["%sender has refilled your stack of %item."]
   Clear:
     Self: ["Your inventory has been cleared."]
     ToOther: ["You cleared %player's inventory."]
@@ -136,55 +134,55 @@ messages:
     ToOther: ["You've blinded %target %duration."]
     FromOther: ["%sender has blinded you %duration."]
   Unblind:
-    Self: ["You decide it'd be nice to see."]
+    Self: ["You unblind yourself."]
     ToOther: ["You unblind %target."]
     FromOther: ["%sender has unblinded you."]
   Mute:
-    Self: []
-    ToOther: []
-    FromOther: []
+    Self: ["You stuff a sock in your mouth."]
+    ToOther: ["You muted %target."]
+    FromOther: ["You were muted by %sender."]
   Unmute:
-    Self: []
-    ToOther: []
-    FromOther: []
+    Self: ["You unmute yourself."]
+    ToOther: ["You unmuted %target."]
+    FromOther: ["You were unmuted by %sender."]
   Kill:
-    Self: []
-    ToOther: []
-    FromOther: []
+    Self: ["Goodbye, cruel world..."]
+    ToOther: ["You just killed %target!"]
+    FromOther: ["You were killed by %sender."]
   Spawn:
-    Self: []
-    ToOther: []
-    FromOther: []
+    Self: ["You returned to spawn."]
+    ToOther: ["You returned %target to spawn."]
+    FromOther: ["%sender returned you to spawn."]
   SpawnMob:
-    Self: []
+    Self: ["You spawned %amount %mob(s)."]
   Teleport:
-    Self: []
-    ToOther: []
-    FromOther: []
+    Self: ["You teleported to %destination."]
+    ToOther: ["You teleported %target to %destination."]
+    FromOther: ["%sender teleported you to %destination."]
   TeleportRequest:
-    ToOther: []
-    FromOther: []
+    ToOther: ["You requested a teleport to %target."]
+    FromOther: ["%sender requested a teleport to you. §3/tpaccept §6to accept."]
   TeleportCall:
-    ToOther: []
-    FromOther: []
+    ToOther: ["You called %target to yourself."]
+    FromOther: ["%sender called you to him/her.  §3/tpaccept §6to accept."]
   TeleprivacyOff:
-    Self: []
+    Self: ["Anyone can teleport to you without request."]
   TeleprivacyLow:
-    Self: []
+    Self: ["You will now recieve teleport requests."]
   TeleprivacyHigh:
-    Self: []
+    Self: ["Teleport requests will now be ignored."]
   TeleportDenied:
-    Self: []
+    Self: ["Teleport denied."]
   Warp:
-    Self: []
-    ToOther: []
-    FromOther: []
+    Self: ["You warped to %warp."]
+    ToOther: ["You sent %target to %warp."]
+    FromOther: ["You were warped to %warp by %sender."]
   EditWarp:
-    Self: []
+    Self: ["Successfully edited %warp."]
   CreateWarp:
-    Self: []
+    Self: ["Successfully created %warp."]
   RemoveWarp:
-    Self: []
+    Self: ["Successfully removed %warp."]
   Time:
     Self: ["It's %time."]
   SetTime:

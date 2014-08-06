@@ -7,6 +7,7 @@ import us.zingalicio.zinglib.plugin.ZingPlugin;
 
 public enum StoredMessages 
 {
+	GENERAL_FAILURE("GeneralFailure"),
 	NO_CONSOLE("NoConsole"),
 	BANNED("Banned"), //%target %reason
 	KICKED("Kicked"), //%target %reason
@@ -19,7 +20,6 @@ public enum StoredMessages
 	SET_WALK_SPEED("WalkSpeed"), //%speed
 	GIVEN_ITEM("GiveOne"), //%item
 	GIVEN_ITEMS("GiveMany"), //%item %amount
-	GIVEN_MORE("More"), //%item
 	CLEARED_INVENTORY("Clear"),
 	GIVEN_KIT("Kit"), //%kit
 	EDITED_KIT("EditKit"), //%kit
