@@ -1,7 +1,7 @@
 blocks:
   AIR: 
     scroll:
-    sound:
+    sound: LAVA_POP
     names:
     data:
     name: Air

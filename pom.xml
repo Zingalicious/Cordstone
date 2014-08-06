@@ -20,6 +20,11 @@
             <id>pex-repo</id>
             <url>http://pex-repo.zachsthings.com</url>
         </repository>
+    <repository>
+        <id>dpohvar.ru</id>
+        <name>dpohvar.ru-releases</name>
+        <url>http://dpohvar.ru/artifactory/release</url>
+    </repository>
 	<repository>
 	  <id>fanciful-mvn-repo</id>
 	  <url>https://raw.github.com/mkremins/fanciful/mvn-repo/</url>
@@ -47,6 +52,12 @@
   		<artifactId>fanciful</artifactId>
   		<version>0.1.5</version>
   	</dependency>
+    <dependency>
+        <groupId>me.dpohvar.powernbt</groupId>
+        <artifactId>PowerNBT</artifactId>
+        <version>0.7.2</version>
+        <scope>provided</scope>
+    </dependency>
       </dependencies>
       
   <build>

@@ -2,5 +2,6 @@ main: us.zingalicio.zinglib.ZingLib
 name: ZingLib
 version: ${project.version}
 description: ${project.description}
+depends: [PermissionsEx, PowerNBT]
 author: zingten11
 database: false

@@ -1,0 +1,229 @@
+messages:
+  Banned:
+    Self: ["What m8"]
+    ToOther: ["You just banned %target %reason.","You iced %target %reason."]
+    FromOther: ["%sender banned %target %reason.","%target was banned by %sender %reason."]
+  Kicked: 
+    Self: ["What m8"]
+    ToOther: ["You kicked %target %reason."]
+    FromOther: ["%sender kicked %target %reason."]
+  Biome: 
+    Self: ["You're in a %biome biome."]
+    ToOther: ["%target is in a %biome biome."]
+  BuildMode:
+    Self: ["Your Build-Mode is now %state."]
+    ToOther: ["%target's Build-Mode is now %state."]
+    FromOther: ["%sender has set your Build-Mode to %state."]
+  Butcher:
+    Self: ["You butchered %number mobs."]
+    FromOther: ["%sender butchered %number mobs."]
+  FlightOn:
+    Self: ["You can now fly!"]
+    ToOther: ["%target can now fly!"]
+    FromOther: ["%sender has enabled your flight!"]
+  FlightOff:
+    Self: ["You can no longer fly."]
+    ToOther: ["%target can no longer fly."]
+    FromOther: ["%sender has disabled your flight!"]
+  FlightSpeed:
+    Self: ["Your flight speed was set to %speed."]
+    ToOther: ["%target's flight speed was set to %speed."]
+    FromOther: [Your flight speed was set to %speed by %sender."]
+  WalkSpeed:
+    Self: ["Your walk speed was set to %speed."]
+    ToOther: ["%target's walk speed was set to %speed."]
+    FromOther: [Your walk speed was set to %speed by %sender."]
+  GiveOne:
+    Self: ["You've been given one %item."]
+    ToOther: ["You've given one %item to %target."]
+    FromOther: ["%sender has given you one %item."]
+  GiveMany:
+    Self: ["You've been given %amount %item."]
+    ToOther: ["You've given %amount %item to %target."]
+    FromOther: ["%sender has given you %amount %item."]
+  More:
+    Self: ["You've refilled your stack of %item."]
+    ToOther: ["You've refilled %target's stack of %item."]
+    FromOther: ["%sender has refilled your stack of %item."]
+  Clear:
+    Self: ["Your inventory has been cleared."]
+    ToOther: ["You cleared %player's inventory."]
+    FromOther: ["%sender has cleared your inventory."]
+  Kit:
+    Self: ["You've been given the %kit kit."]
+    ToOther: ["You've given the %kit kit to %target."]
+    FromOther: ["%sender has given you the %kit kit."]
+  CreateKit:
+    Self: ["Successfully made the %kit kit."]
+  EditKit:
+    Self: ["Successfully edited the %kit kit."]
+  RemoveKit:
+    Self: ["Successfully deleted the %kit kit."]
+  Head:
+    Self: ["Given the head of %player."]
+    ToOther: ["Gave the head of %player to %target."]
+    FromOther: ["%sender sent you the head of %player."]
+  HeadSelf:
+    Self: ["Given your own head."]
+    ToOther: ["Sent %target his/her own head."]
+    FromOther: ["%sender sent you your own head."]
+  Home:
+    Self: ["Returned home."]
+    ToOther: ["Sent %target home."]
+    FromOther: ["Returned home by %sender."]
+  SetHome:
+    Self: ["Home set."]
+  GodEnabled:
+    Self: ["You have become god-like!","You have enabled god-mode!"]
+    ToOther: ["You turned on %player's god-mode."]
+    FromOther: ["%sender turned on your god-mode."]
+  GodDisabled:
+    Self: ["Your god-like powers are gone, b0ss."]
+    ToOther: ["You turned off %player's god-mode."]
+    FromOther: ["%sender turned off your god-mode."]
+  Healed:
+    Self: ["You've been healed."]
+    ToOther: ["You healed %player."]
+    FromOther: ["%sender healed you."]
+  InvalidItem:
+    Self: ["Invalid item!"]
+  InvalidAmount:
+    Self: ["Invalid amount!"]
+  NoPlayer:
+    Self: ["No such player!","Ain't nobody with a name like that!"]
+  Ping:
+    Self: ["Pong!","Yes, we can hear you.","Yo, bro(/sis)."]
+  Rocket:
+    Self: ["You launched yourself into the air %power.  Great."]
+    ToOther: ["You launched %target into the air %power.]
+    FromOther: ["%sender launched you into the air %power.]
+  Slap:
+    Self: ["You slap yourself, fruitlessly."]
+    ToOther: ["You slapped %target."]
+    FromOther: ["You've been slapped by %sender."]
+  Frozen:
+    Self: ["You are frozen, today (%duration)!"]
+    ToOther: ["You froze %target %duration."]
+    FromOther: ["%sender froze you %duration."]
+  Unfrozen:
+    Self: ["You break free of your own power! AAAAA!"]
+    ToOther: ["You unfroze %target."]
+    FromOther: ["%sender unfroze you."]
+  Shock:
+    Self: ["By the power of Greyskull!","I have the power!"]
+    ToOther: ["You shocked %target."]
+    FromOther: ["%sender shocked you."]
+  Drunk:
+    Self: ["You drink yourself silly.","That wasn't fruit punch!"]
+    ToOther: ["Wait, what'd you put into %target's drink?"]
+    FromOther: ["You feel weird. It was probably %sender..."]
+  Sober:
+    Self: ["You sober yourself right up."]
+    ToOther: ["You give %target a blood transfusion. With nice, clean blood."]
+    FromOther: ["%sender somehow removes the alcohol from your veins."]
+  Effect:
+    Self: ["You give yourself %effect for %duration.","Prepare for %duration of %effect!"]
+    ToOther: ["You give %target %duration of %effect."]
+    FromOther: ["%sender gives you %effect for %duration."]
+  ClearedEffects:
+    Self: ["You clear your chi."]
+    ToOther: ["You erase the effects on %target."]
+    FromOther: ["Your effects have been cleared by %sender."]
+  Blind:
+    Self: ["You decide to try out the new \"blind ninja\" fad %duration."]
+    ToOther: ["You've blinded %target %duration."]
+    FromOther: ["%sender has blinded you %duration."]
+  Unblind:
+    Self: ["You decide it'd be nice to see."]
+    ToOther: ["You unblind %target."]
+    FromOther: ["%sender has unblinded you."]
+  Mute:
+    Self: []
+    ToOther: []
+    FromOther: []
+  Unmute:
+    Self: []
+    ToOther: []
+    FromOther: []
+  Kill:
+    Self: []
+    ToOther: []
+    FromOther: []
+  Spawn:
+    Self: []
+    ToOther: []
+    FromOther: []
+  SpawnMob:
+    Self: []
+  Teleport:
+    Self: []
+    ToOther: []
+    FromOther: []
+  TeleportRequest:
+    ToOther: []
+    FromOther: []
+  TeleportCall:
+    ToOther: []
+    FromOther: []
+  TeleprivacyOff:
+    Self: []
+  TeleprivacyLow:
+    Self: []
+  TeleprivacyHigh:
+    Self: []
+  TeleportDenied:
+    Self: []
+  Warp:
+    Self: []
+    ToOther: []
+    FromOther: []
+  EditWarp:
+    Self: []
+  CreateWarp:
+    Self: []
+  RemoveWarp:
+    Self: []
+  Time:
+    Self: ["It's %time."]
+  SetTime:
+    Self: ["You set the time to %time."]
+    FromOther: ["%sender set the time to %time."]
+  SunnyWeather:
+    Self: ["It's nice outside.","Nice and dry.","Not raining."]
+  RainyWeather:
+    Self: ["Not so good.","Pretty bad.","Rainy and wet."]
+  Thundering:
+    Self: ["It is %state thundering."]
+  SetWeather:
+    Self: ["Weather set to %state."]
+    FromOther: ["%sender set the weather to %state."]
+  SetPrefix:
+    Self: ["Your prefix is now: %prefix."]
+    ToOther: ["You changed %target's prefix to %prefix."]
+    FromOther: ["%sender changed your prefix to %prefix."]
+  SetSuffix:
+    Self: ["Your suffix is now: %suffix."]
+    ToOther: ["You changed %target's suffix to %suffix."]
+    FromOther: ["%sender changed your suffix to %suffix."]
+  SetDisplayName:
+    Self: ["Your display name is now: %display name."]
+    ToOther: ["You changed %target's display name to %display name."]
+    FromOther: ["%sender changed your display name to %display name."]
+  ClearPrefix:
+    Self: ["Your prefix has been cleared."]
+    ToOther: ["You cleared %target's prefix."]
+    FromOther: ["%sender cleared your prefix."]
+  ClearSuffix:
+    Self: ["Your suffix has been cleared."]
+    ToOther: ["You cleared %target's suffix."]
+    FromOther: ["%sender cleared your suffix."]
+  ClearDisplayName:
+    Self: ["Your display name has been cleared."]
+    ToOther: ["You cleared %target's display name."]
+    FromOther: ["%sender cleared your display name."]
+  NoHelp:
+    Self: ["No such help entry! Try /help topics!"]
+  Reload:
+    Self: ["Plugin reloaded."]
+  Version:
+    Self: ["Plugin version: %version."]

@@ -12,10 +12,12 @@ import us.zingalicio.zinglib.util.ConfigUtil;
 public abstract class ZingPlugin extends JavaPlugin
 {
 	protected final YamlConfiguration materials;
+	protected final YamlConfiguration messages;
 	protected final YamlConfiguration items;
 	protected final YamlConfiguration config;
 	
 	protected final File materialFile;
+	protected final File messageFile;
 	protected final File itemFile;
 	protected final File configFile;
 
@@ -26,16 +28,19 @@ public abstract class ZingPlugin extends JavaPlugin
 	public ZingPlugin()
 	{
 		materialFile = new File("plugins/common/materials.yml");
+		messageFile = new File("plugins/common/messages.yml");
 		itemFile = new File("plugins/common/items.yml");
 		configFile = new File(this.getDataFolder() + "/config.yml");
 		
 		materials = new YamlConfiguration();
+		messages = new YamlConfiguration();
 		items = new YamlConfiguration();
 		config = new YamlConfiguration();
 		
 		if(this instanceof ZingLib)
 		{
 			ConfigUtil.saveDefault(this, materialFile);
+			ConfigUtil.saveDefault(this, messageFile);
 			ConfigUtil.saveDefault(this, itemFile);
 		}
 		ConfigUtil.saveDefault(this, configFile);
@@ -43,6 +48,7 @@ public abstract class ZingPlugin extends JavaPlugin
 		name = this.getName();
 		
 		ConfigUtil.loadYaml(materials, materialFile);
+		ConfigUtil.loadYaml(messages, messageFile);
 		ConfigUtil.loadYaml(items, itemFile);
 		ConfigUtil.loadYaml(config, configFile);
 	}
@@ -59,6 +65,10 @@ public abstract class ZingPlugin extends JavaPlugin
 	{
 		return materials;
 	}
+	public YamlConfiguration getMessages()
+	{
+		return messages;
+	}
 	public YamlConfiguration getItems()
 	{
 		return items;
@@ -70,6 +80,10 @@ public abstract class ZingPlugin extends JavaPlugin
 	public File getMaterialFile()
 	{
 		return materialFile;
+	}
+	public File getMessageFile()
+	{
+		return messageFile;
 	}
 	public File getItemFile()
 	{
