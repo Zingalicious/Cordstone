@@ -95,8 +95,8 @@ messages:
     Self: ["Pong!","Yes, we can hear you.","Yo, bro(/sis)."]
   Rocket:
     Self: ["You launched yourself into the air %power.  Great."]
-    ToOther: ["You launched %target into the air %power.]
-    FromOther: ["%sender launched you into the air %power.]
+    ToOther: ["You launched %target into the air %power."]
+    FromOther: ["%sender launched you into the air %power."]
   Slap:
     Self: ["You slap yourself, fruitlessly."]
     ToOther: ["You slapped %target."]
