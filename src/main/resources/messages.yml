@@ -1,4 +1,6 @@
 messages:
+  NoConsole:
+    Self: ["Hitler coded nothing wrong!","You fool!","Consoles aren't real people!"]
   Banned:
     Self: ["What m8"]
     ToOther: ["You just banned %target %reason.","You iced %target %reason."]

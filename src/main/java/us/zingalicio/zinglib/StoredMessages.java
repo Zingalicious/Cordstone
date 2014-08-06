@@ -7,6 +7,7 @@ import us.zingalicio.zinglib.plugin.ZingPlugin;
 
 public enum StoredMessages 
 {
+	NO_CONSOLE("NoConsole"),
 	BANNED("Banned"), //%target %reason
 	KICKED("Kicked"), //%target %reason
 	BIOME("Biome"), //%biome
