@@ -105,7 +105,7 @@ public enum StoredMessages
 	}	
 	public String toMessage(ZingPlugin plugin)
 	{
-		List<String> messageList = plugin.getMessages().getStringList("messages.to." + this.s + ".ToOther");
+		List<String> messageList = plugin.getMessages().getStringList("messages." + this.s + ".ToOther");
 		if(messageList == null || messageList.size() == 0)
 		{
 			return "No Message Found";
