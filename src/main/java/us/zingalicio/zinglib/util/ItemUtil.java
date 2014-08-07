@@ -271,7 +271,6 @@ public class ItemUtil
 		}
 		try 
 		{
-			Bukkit.getLogger().log(Level.INFO, section.getString("material"));
 			plugin.getItems().save(plugin.getItemFile());
 		} 
 		catch (IOException e1) 
@@ -283,7 +282,6 @@ public class ItemUtil
 		theoreticalItem.setItemMeta(theoreticalMeta);
 		if(item.isSimilar(theoreticalItem))
 		{
-			Bukkit.getLogger().log(Level.INFO, "Similar!");
 			return 0;
 		}
 		section.set("extra", "true");

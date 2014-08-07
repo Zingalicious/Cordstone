@@ -18,6 +18,8 @@ public enum StoredMessages
 	SET_FLIGHT_OFF("FlightOff"),
 	SET_FLIGHT_SPEED("FlightSpeed"), //%speed
 	SET_WALK_SPEED("WalkSpeed"), //%speed
+	CHECK_FLIGHT_SPEED("CheckFlightSpeed"), //%speed
+	CHECK_WALK_SPEED("CheckWalkSpeed"), //%speed
 	GIVEN_ITEM("GiveOne"), //%item
 	GIVEN_ITEMS("GiveMany"), //%item %amount
 	CLEARED_INVENTORY("Clear"),
