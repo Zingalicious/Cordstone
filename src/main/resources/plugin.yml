@@ -5,3 +5,6 @@ description: ${project.description}
 depends: [PermissionsEx, PowerNBT]
 author: zingten11
 database: false
+commands:
+  zinglib:
+    aliases: [zl]

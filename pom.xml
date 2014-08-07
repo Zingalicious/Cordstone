@@ -30,7 +30,7 @@
 	  <url>https://raw.github.com/mkremins/fanciful/mvn-repo/</url>
 	  <snapshots>
 	    <enabled>true</enabled>
-	    <updatePolicy>always</updatePolicy>
+	    <updatePolicy>never</updatePolicy>
 	  </snapshots>
 	</repository>
     </repositories>
@@ -47,11 +47,11 @@
       		<version>1.22</version>
       		<scope>provided</scope>
       	</dependency>
-  	<dependency>
-  		<groupId>mkremins</groupId>
-  		<artifactId>fanciful</artifactId>
-  		<version>0.1.5</version>
-  	</dependency>
+      	<dependency>
+      		<groupId>mkremins</groupId>
+      		<artifactId>fanciful</artifactId>
+      		<version>0.1.5</version>
+      	</dependency>
     <dependency>
         <groupId>me.dpohvar.powernbt</groupId>
         <artifactId>PowerNBT</artifactId>

@@ -206,9 +206,9 @@ messages:
     ToOther: ["You changed %target's suffix to %suffix."]
     FromOther: ["%sender changed your suffix to %suffix."]
   SetDisplayName:
-    Self: ["Your display name is now: %display name."]
-    ToOther: ["You changed %target's display name to %display name."]
-    FromOther: ["%sender changed your display name to %display name."]
+    Self: ["Your display name is now: %displayname."]
+    ToOther: ["You changed %target's display name to %displayname."]
+    FromOther: ["%sender changed your display name to %displayname."]
   ClearPrefix:
     Self: ["Your prefix has been cleared."]
     ToOther: ["You cleared %target's prefix."]

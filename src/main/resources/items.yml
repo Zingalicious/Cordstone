@@ -1,7 +1,11 @@
 items:
   paintbrush:
-    type: "EMERALD"
+    material: EMERALD
     data: 1
-    displayname: "Paintbrush"
-    lore: 
-
+    name: "Paintbrush"
+    lore: ["§6Bona fide!"]
+  zingskull:
+    material: SKULL_ITEM
+    data: 3
+    extra:
+      SkullOwner: String zingten11

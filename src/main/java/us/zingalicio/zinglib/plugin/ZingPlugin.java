@@ -2,6 +2,7 @@ package us.zingalicio.zinglib.plugin;
 
 import java.io.File;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -27,30 +28,45 @@ public abstract class ZingPlugin extends JavaPlugin
 	
 	public ZingPlugin()
 	{
-		materialFile = new File("plugins/common/materials.yml");
-		messageFile = new File("plugins/common/messages.yml");
-		itemFile = new File("plugins/common/items.yml");
-		configFile = new File(this.getDataFolder() + "/config.yml");
-		
-		materials = new YamlConfiguration();
-		messages = new YamlConfiguration();
-		items = new YamlConfiguration();
-		config = new YamlConfiguration();
-		
-		if(this instanceof ZingLib)
+		if(!(this instanceof ZingLib))
 		{
+			ZingLib zingLib = (ZingLib) Bukkit.getPluginManager().getPlugin("ZingLib");
+			
+			materialFile = zingLib.materialFile;
+			messageFile = zingLib.messageFile;
+			itemFile = zingLib.itemFile;
+			
+			materials = zingLib.materials;
+			messages = zingLib.messages;
+			items = zingLib.items;
+		}
+		else
+		{
+			materialFile = new File("plugins/common/materials.yml");
+			messageFile = new File("plugins/common/messages.yml");
+			itemFile = new File("plugins/common/items.yml");
+			
+			materials = new YamlConfiguration();
+			messages = new YamlConfiguration();
+			items = new YamlConfiguration();
+
 			ConfigUtil.saveDefault(this, materialFile);
 			ConfigUtil.saveDefault(this, messageFile);
 			ConfigUtil.saveDefault(this, itemFile);
+			
+			ConfigUtil.loadYaml(materials, materialFile);
+			ConfigUtil.loadYaml(messages, messageFile);
+			ConfigUtil.loadYaml(items, itemFile);
 		}
+		configFile = new File(this.getDataFolder() + "/config.yml");
+		
+		config = new YamlConfiguration();
+		
 		ConfigUtil.saveDefault(this, configFile);
 		
-		name = this.getName();
-		
-		ConfigUtil.loadYaml(materials, materialFile);
-		ConfigUtil.loadYaml(messages, messageFile);
-		ConfigUtil.loadYaml(items, itemFile);
 		ConfigUtil.loadYaml(config, configFile);
+
+		name = this.getName();
 	}
 
 	@Override
@@ -58,6 +74,7 @@ public abstract class ZingPlugin extends JavaPlugin
 	{
 		ConfigUtil.saveYaml(config, configFile);
 		ConfigUtil.saveYaml(materials, materialFile);
+		ConfigUtil.saveYaml(messages, messageFile);
 		ConfigUtil.saveYaml(items, itemFile);
 	}
 	
