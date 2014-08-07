@@ -28,19 +28,7 @@ public abstract class ZingPlugin extends JavaPlugin
 	
 	public ZingPlugin()
 	{
-		if(!(this instanceof ZingLib))
-		{
-			ZingLib zingLib = (ZingLib) Bukkit.getPluginManager().getPlugin("ZingLib");
-			
-			materialFile = zingLib.materialFile;
-			messageFile = zingLib.messageFile;
-			itemFile = zingLib.itemFile;
-			
-			materials = zingLib.materials;
-			messages = zingLib.messages;
-			items = zingLib.items;
-		}
-		else
+		if(this instanceof ZingLib)
 		{
 			materialFile = new File("plugins/common/materials.yml");
 			messageFile = new File("plugins/common/messages.yml");
@@ -57,6 +45,18 @@ public abstract class ZingPlugin extends JavaPlugin
 			ConfigUtil.loadYaml(materials, materialFile);
 			ConfigUtil.loadYaml(messages, messageFile);
 			ConfigUtil.loadYaml(items, itemFile);
+		}
+		else
+		{
+			ZingLib zingLib = (ZingLib) Bukkit.getPluginManager().getPlugin("ZingLib");
+			
+			materialFile = zingLib.materialFile;
+			messageFile = zingLib.messageFile;
+			itemFile = zingLib.itemFile;
+			
+			materials = zingLib.materials;
+			messages = zingLib.messages;
+			items = zingLib.items;
 		}
 		configFile = new File(this.getDataFolder() + "/config.yml");
 		

@@ -271,6 +271,7 @@ public class ItemUtil
 		}
 		try 
 		{
+			Bukkit.getLogger().log(Level.INFO, section.getString("material"));
 			plugin.getItems().save(plugin.getItemFile());
 		} 
 		catch (IOException e1) 
@@ -324,6 +325,15 @@ public class ItemUtil
 		if(plugin.getItems().contains("items." + name.toLowerCase()))
 		{
 			plugin.getItems().set("items." + name.toLowerCase(), null);
+			try 
+			{
+				plugin.getItems().save(plugin.getItemFile());
+			} 
+			catch (IOException e) 
+			{
+				e.printStackTrace();
+				return false;
+			}
 			File nbtFile = new File("plugins/common/itemnbt/" + name.toLowerCase() + ".nbt");
 			if(nbtFile.exists())
 			{
