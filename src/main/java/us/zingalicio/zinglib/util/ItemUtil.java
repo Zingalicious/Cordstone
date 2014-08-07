@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.logging.Level;
 
 import me.dpohvar.powernbt.api.NBTCompound;
@@ -51,24 +52,8 @@ public class ItemUtil
 			}
 			
 			item = new ItemStack(mat, 1, data);
-			
-			//Add name + lore
-			if(items.contains(itemKey + ".name"))
-			{
-				String displayName = items.getString(itemKey + ".name");
-				ItemMeta newMeta = item.getItemMeta();
-				newMeta.setDisplayName(displayName);
-				item.setItemMeta(newMeta);
-			}
-			if(items.contains(itemKey + ".lore"))
-			{
-				List<String> lore = items.getStringList(itemKey + ".lore");
-				ItemMeta newMeta = item.getItemMeta();
-				newMeta.setLore(lore);
-				item.setItemMeta(newMeta);
-			}
-			
-			//Add extra nbt data
+
+			//Add extra nbt data first to be overwritten if necessary.
 			if(items.contains(itemKey + ".extra"))
 			{
 				File nbtFile = new File("plugins/common/itemnbt/" + name.toLowerCase() + ".nbt");
@@ -84,6 +69,41 @@ public class ItemUtil
 					return null;
 				}
 				NBTManager.getInstance().write(item, tag);
+			}
+			
+			//Add name + lore + enchantments
+			if(items.contains(itemKey + ".name"))
+			{
+				String displayName = items.getString(itemKey + ".name");
+				ItemMeta newMeta = item.getItemMeta();
+				newMeta.setDisplayName(displayName);
+				item.setItemMeta(newMeta);
+			}
+			if(items.contains(itemKey + ".lore"))
+			{
+				List<String> lore = items.getStringList(itemKey + ".lore");
+				ItemMeta newMeta = item.getItemMeta();
+				newMeta.setLore(lore);
+				item.setItemMeta(newMeta);
+			}
+			if(items.contains(itemKey + ".enchantment"))
+			{
+				ConfigurationSection section = items.getConfigurationSection(itemKey + ".enchantment");
+				Set<String> keys = section.getKeys(false);
+				for(String s : keys)
+				{
+					Enchantment ench = Enchantment.DURABILITY;
+					int lvl = 0;
+					if(section.contains(s + ".type"))
+					{
+						ench = Enchantment.getByName(section.getString(s + ".type"));
+					}
+					if(section.contains(s + ".level"))
+					{
+						lvl = section.getInt(s + ".level");
+					}
+					item.addUnsafeEnchantment(ench, lvl);
+				}
 			}
 			return item;
 		}
@@ -222,7 +242,7 @@ public class ItemUtil
 		ConfigurationSection section = plugin.getItems().createSection(sectionString);
 		section.set("material", item.getType().name());
 		section.set("data", item.getData().getData());
-		ItemStack theoreticalItem = new ItemStack(item.getType(), item.getAmount(), item.getDurability());
+		ItemStack theoreticalItem = new ItemStack(item.getType(), item.getAmount(), item.getDurability(), item.getData().getData());
 		ItemMeta theoreticalMeta = theoreticalItem.getItemMeta();
 		if(item.hasItemMeta())
 		{
@@ -260,21 +280,60 @@ public class ItemUtil
 			return 3;
 		}
 		theoreticalItem.setItemMeta(theoreticalMeta);
-		if(item == theoreticalItem)
+		if(item.isSimilar(theoreticalItem))
 		{
+			Bukkit.getLogger().log(Level.INFO, "Similar!");
 			return 0;
+		}
+		section.set("extra", "true");
+		try 
+		{
+			plugin.getItems().save(plugin.getItemFile());
+		} 
+		catch (IOException e1) 
+		{
+			Bukkit.getLogger().log(Level.INFO, "Failed to save items.yml.");
+			e1.printStackTrace();
+			return 3;
 		}
 		NBTCompound tag = NBTManager.getInstance().read(item);
 		File itemFile = new File("plugins/common/itemnbt/" + name.toLowerCase() + ".nbt");
 		try 
 		{
-			NBTManager.getInstance().write(itemFile, tag);
+			if(!itemFile.getParentFile().exists())
+			{
+				itemFile.getParentFile().mkdirs();
+			}
+			if(itemFile.exists())
+			{
+				itemFile.delete();
+			}
+			itemFile.createNewFile();
+			NBTManager.getInstance().writeCompressed(itemFile, tag);
 			return 0;
 		}
 		catch (IOException e)
 		{
 			e.printStackTrace();
 			return 2;
+		}
+	}
+	
+	public static boolean deleteItem(ZingPlugin plugin, String name)
+	{
+		if(plugin.getItems().contains("items." + name.toLowerCase()))
+		{
+			plugin.getItems().set("items." + name.toLowerCase(), null);
+			File nbtFile = new File("plugins/common/itemnbt/" + name.toLowerCase() + ".nbt");
+			if(nbtFile.exists())
+			{
+				nbtFile.delete();
+			}
+			return true;
+		}
+		else
+		{
+			return false;
 		}
 	}
 	
