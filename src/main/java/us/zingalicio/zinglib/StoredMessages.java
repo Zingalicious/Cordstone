@@ -18,8 +18,8 @@ public enum StoredMessages
 	SET_FLIGHT_OFF("FlightOff"),
 	SET_FLIGHT_SPEED("FlightSpeed"), //%speed
 	SET_WALK_SPEED("WalkSpeed"), //%speed
-	CHECK_FLIGHT_SPEED("CheckFlightSpeed"), //%speed
-	CHECK_WALK_SPEED("CheckWalkSpeed"), //%speed
+	CHECKED_FLIGHT_SPEED("CheckFlightSpeed"), //%speed
+	CHECKED_WALK_SPEED("CheckWalkSpeed"), //%speed
 	GIVEN_ITEM("GiveOne"), //%item
 	GIVEN_ITEMS("GiveMany"), //%item %amount
 	CLEARED_INVENTORY("Clear"),
@@ -71,12 +71,18 @@ public enum StoredMessages
 	RAINY_WEATHER("RainyWeather"),
 	THUNDERING("Thundering"), //%state
 	SET_WEATHER("SetWeather"), //%state
-	SET_PREFIX("SetPrefix"), //%prefix
-	SET_SUFFIX("SetSuffix"), //%suffix
-	SET_DISPLAY_NAME("SetDisplayName"), //%name
-	CLEAR_PREFIX("ClearPrefix"),
-	CLEAR_SUFFIX("ClearSuffix"),
-	CLEAR_DISPLAY_NAME("ClearDisplayName"),
+	SET_PREFIX("SetPrefix"), //%new
+	SET_SUFFIX("SetSuffix"), //%new
+	SET_DISPLAY_NAME("SetDisplayName"), //%new
+	SET_JOIN_MESSAGE("SetJoinMessage"), //%new
+	CHECKED_PREFIX("CheckPrefix"), //%current
+	CHECKED_SUFFIX("CheckSuffix"), //%current
+	CHECKED_DISPLAY_NAME("CheckDisplayName"), //%current
+	CHECKED_JOIN_MESSAGE("CheckJoinMessage"), //%current
+	CLEARED_PREFIX("ClearPrefix"),
+	CLEARED_SUFFIX("ClearSuffix"),
+	CLEARED_DISPLAY_NAME("ClearDisplayName"),
+	CLEARED_JOIN_MESSAGE("ClearJoinMessage"),
 	NO_HELP("NoHelp"),
 	RELOADED("Reload"),
 	VERSION("Version"); //%version

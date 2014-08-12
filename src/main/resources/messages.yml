@@ -362,30 +362,50 @@ messages:
     - '%sender set the weather to %state.'
   SetPrefix:
     Self:
-    - 'Your prefix is now: %prefix.'
+    - 'Your prefix is now %new.'
     ToOther:
-    - You changed %target's prefix to %prefix.
+    - You changed %target's prefix to %new.
     FromOther:
-    - '%sender changed your prefix to %prefix.'
+    - '%sender changed your prefix to %new.'
   SetSuffix:
     Self:
-    - 'Your suffix is now: %suffix.'
+    - 'Your suffix is now %new.'
     ToOther:
-    - You changed %target's suffix to %suffix.
+    - You changed %target's suffix to %new.
     FromOther:
-    - '%sender changed your suffix to %suffix.'
+    - '%sender changed your suffix to %new.'
   SetDisplayName:
     Self:
-    - 'Your display name is now: %displayname.'
+    - 'Your display name is now %new.'
     ToOther:
-    - You changed %target's display name to %displayname.
+    - "You changed %target's display name to %new."
     FromOther:
-    - '%sender changed your display name to %displayname.'
+    - '%sender changed your display name to %new.'
+  CheckPrefix:
+    Self:
+    - 'Your prefix is %current.'
+    ToOther:
+    - "%target's prefix is %current."
+  CheckSuffix:
+    Self:
+    - 'Your suffix is %current.'
+    ToOther:
+    - "%target's suffix is %current."
+  CheckDisplayName:
+    Self:
+    - 'Your display name is %current.'
+    ToOther:
+    - "%target's display name is %current."
+  CheckJoinMessage:
+    Self:
+    - 'Your join message is %current.'
+    ToOther:
+    - "%target's join message is %current."
   ClearPrefix:
     Self:
     - Your prefix has been cleared.
     ToOther:
-    - You cleared %target's prefix.
+    - "You cleared %target's prefix."
     FromOther:
     - '%sender cleared your prefix.'
   ClearSuffix:
