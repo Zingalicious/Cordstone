@@ -337,6 +337,15 @@ public class ItemUtil
 			{
 				nbtFile.delete();
 			}
+			try 
+			{
+				plugin.getItems().save(plugin.getItemFile());
+			} 
+			catch (IOException e) 
+			{
+				e.printStackTrace();
+				return true;
+			}
 			return true;
 		}
 		else

@@ -1,14 +1,4 @@
 messages:
-  GeneralFailure:
-    Self:
-    - Failed.
-    - An error occurred while you were doing whatever it is you were doing.
-  NoConsole:
-    Self:
-    - Hitler coded nothing wrong!
-    - You fool!
-    - Consoles aren't real people!
-    - You foolish console peasant!
   Banned:
     Self:
     - What m8
@@ -18,232 +8,6 @@ messages:
     FromOther:
     - '%sender banned %target %reason.'
     - '%target was banned by %sender %reason.'
-  Kicked:
-    Self:
-    - What m8
-    ToOther:
-    - You kicked %target %reason.
-    FromOther:
-    - '%sender kicked %target %reason.'
-  Biome:
-    Self:
-    - You're in a %biome biome.
-    ToOther:
-    - '%target is in a %biome biome.'
-  BuildMode:
-    Self:
-    - Your Build-Mode is now %state.
-    ToOther:
-    - '%target''s Build-Mode is now %state.'
-    FromOther:
-    - '%sender has set your Build-Mode to %state.'
-  Butcher:
-    Self:
-    - You butchered %number mobs.
-    FromOther:
-    - '%sender butchered %number mobs.'
-  FlightOn:
-    Self:
-    - You can now fly!
-    ToOther:
-    - '%target can now fly!'
-    FromOther:
-    - '%sender has enabled your flight!'
-  FlightOff:
-    Self:
-    - You can no longer fly.
-    ToOther:
-    - '%target can no longer fly.'
-    FromOther:
-    - '%sender has disabled your flight!'
-  FlightSpeed:
-    Self:
-    - Your flight speed was set to %speed.
-    ToOther:
-    - '%target''s flight speed was set to %speed.'
-    FromOther:
-    - Your flight speed was set to %speed by %sender."
-  WalkSpeed:
-    Self:
-    - Your walk speed was set to %speed.
-    ToOther:
-    - '%target''s walk speed was set to %speed.'
-    FromOther:
-    - Your walk speed was set to %speed by %sender."
-  CheckFlightSpeed:
-    Self:
-    - Your flight speed is %speed.
-    ToOther:
-    - '%target''s flight speed is %speed.'
-  CheckWalkSpeed:
-    Self:
-    - Your walk speed is %speed.
-    ToOther:
-    - '%target''s walk speed is %speed.'
-  GiveOne:
-    Self:
-    - You've been given one %item.
-    ToOther:
-    - You've given one %item to %target.
-    FromOther:
-    - '%sender has given you one %item.'
-  GiveMany:
-    Self:
-    - You've been given %amount %item.
-    ToOther:
-    - You've given %amount %item to %target.
-    FromOther:
-    - '%sender has given you %amount %item.'
-  Clear:
-    Self:
-    - Your inventory has been cleared.
-    ToOther:
-    - You cleared %player's inventory.
-    FromOther:
-    - '%sender has cleared your inventory.'
-  Kit:
-    Self:
-    - You've been given the %kit kit.
-    ToOther:
-    - You've given the %kit kit to %target.
-    FromOther:
-    - '%sender has given you the %kit kit.'
-  CreateKit:
-    Self:
-    - Successfully made the %kit kit.
-  EditKit:
-    Self:
-    - Successfully edited the %kit kit.
-  RemoveKit:
-    Self:
-    - Successfully deleted the %kit kit.
-  Head:
-    Self:
-    - Given the head of %player.
-    ToOther:
-    - Gave the head of %player to %target.
-    FromOther:
-    - '%sender sent you the head of %player.'
-  HeadSelf:
-    Self:
-    - Given your own head.
-    ToOther:
-    - Sent %target his/her own head.
-    FromOther:
-    - '%sender sent you your own head.'
-  Home:
-    Self:
-    - Returned home.
-    ToOther:
-    - Sent %target home.
-    FromOther:
-    - Returned home by %sender.
-  SetHome:
-    Self:
-    - Home set.
-  GodEnabled:
-    Self:
-    - You have become god-like!
-    - You have enabled god-mode!
-    ToOther:
-    - You turned on %player's god-mode.
-    FromOther:
-    - '%sender turned on your god-mode.'
-  GodDisabled:
-    Self:
-    - Your god-like powers are gone, b0ss.
-    ToOther:
-    - You turned off %player's god-mode.
-    FromOther:
-    - '%sender turned off your god-mode.'
-  Healed:
-    Self:
-    - You've been healed.
-    ToOther:
-    - You healed %player.
-    FromOther:
-    - '%sender healed you.'
-  InvalidItem:
-    Self:
-    - Invalid item!
-  InvalidAmount:
-    Self:
-    - Invalid amount!
-  NoPlayer:
-    Self:
-    - No such player!
-    - Ain't nobody with a name like that!
-  Ping:
-    Self:
-    - Pong!
-    - Yes, we can hear you.
-    - Yo, bro(/sis).
-  Rocket:
-    Self:
-    - You launched yourself into the air %power.  Great.
-    ToOther:
-    - You launched %target into the air %power.
-    FromOther:
-    - '%sender launched you into the air %power.'
-  Slap:
-    Self:
-    - You slap yourself, fruitlessly.
-    ToOther:
-    - You slapped %target.
-    FromOther:
-    - You've been slapped by %sender.
-  Frozen:
-    Self:
-    - You are frozen, today (%duration)!
-    ToOther:
-    - You froze %target %duration.
-    FromOther:
-    - '%sender froze you %duration.'
-  Unfrozen:
-    Self:
-    - You break free of your own power! AAAAA!
-    ToOther:
-    - You unfroze %target.
-    FromOther:
-    - '%sender unfroze you.'
-  Shock:
-    Self:
-    - By the power of Greyskull!
-    - I have the power!
-    ToOther:
-    - You shocked %target.
-    FromOther:
-    - '%sender shocked you.'
-  Drunk:
-    Self:
-    - You drink yourself silly.
-    - That wasn't fruit punch!
-    ToOther:
-    - Wait, what'd you put into %target's drink?
-    FromOther:
-    - You feel weird. It was probably %sender...
-  Sober:
-    Self:
-    - You sober yourself right up.
-    ToOther:
-    - You give %target a blood transfusion. With nice, clean blood.
-    FromOther:
-    - '%sender somehow removes the alcohol from your veins.'
-  Effect:
-    Self:
-    - You give yourself %effect for %duration.
-    - Prepare for %duration of %effect!
-    ToOther:
-    - You give %target %duration of %effect.
-    FromOther:
-    - '%sender gives you %effect for %duration.'
-  ClearedEffects:
-    Self:
-    - You clear your chi.
-    ToOther:
-    - You erase the effects on %target.
-    FromOther:
-    - Your effects have been cleared by %sender.
   Blind:
     Self:
     - You decide to try out the new "blind ninja" fad %duration.
@@ -251,136 +15,31 @@ messages:
     - You've blinded %target %duration.
     FromOther:
     - '%sender has blinded you %duration.'
-  Unblind:
+  Butcher:
     Self:
-    - You unblind yourself.
+    - You butchered %number mobs.
+    FromOther:
+    - '%sender butchered %number mobs.'
+  CheckBiome:
+    Self:
+    - You're in a %biome biome.
     ToOther:
-    - You unblind %target.
-    FromOther:
-    - '%sender has unblinded you.'
-  Mute:
+    - '%target is in a %biome biome.'
+  CheckDisplayName:
     Self:
-    - You stuff a sock in your mouth.
+    - 'Your display name is %current.'
     ToOther:
-    - You muted %target.
-    FromOther:
-    - You were muted by %sender.
-  Unmute:
+    - "%target's display name is %current."
+  CheckFlightSpeed:
     Self:
-    - You unmute yourself.
+    - Your flight speed is %speed.
     ToOther:
-    - You unmuted %target.
-    FromOther:
-    - You were unmuted by %sender.
-  Kill:
+    - '%target''s flight speed is %speed.'
+  CheckJoinMessage:
     Self:
-    - Goodbye, cruel world...
+    - 'Your join message is %current.'
     ToOther:
-    - You just killed %target!
-    FromOther:
-    - You were killed by %sender.
-  Spawn:
-    Self:
-    - You returned to spawn.
-    ToOther:
-    - You returned %target to spawn.
-    FromOther:
-    - '%sender returned you to spawn.'
-  SpawnMob:
-    Self:
-    - You spawned %amount %mob(s).
-  Teleport:
-    Self:
-    - You teleported to %destination.
-    ToOther:
-    - You teleported %target to %destination.
-    FromOther:
-    - '%sender teleported you to %destination.'
-  TeleportRequest:
-    ToOther:
-    - You requested a teleport to %target.
-    FromOther:
-    - '%sender requested a teleport to you. §3/tpaccept §6to accept.'
-  TeleportCall:
-    ToOther:
-    - You called %target to yourself.
-    FromOther:
-    - '%sender called you to him/her.  §3/tpaccept §6to accept.'
-  TeleprivacyOff:
-    Self:
-    - Anyone can teleport to you without request.
-  TeleprivacyLow:
-    Self:
-    - You will now recieve teleport requests.
-  TeleprivacyHigh:
-    Self:
-    - Teleport requests will now be ignored.
-  TeleportDenied:
-    Self:
-    - Teleport denied.
-  Warp:
-    Self:
-    - You warped to %warp.
-    ToOther:
-    - You sent %target to %warp.
-    FromOther:
-    - You were warped to %warp by %sender.
-  EditWarp:
-    Self:
-    - Successfully edited %warp.
-  CreateWarp:
-    Self:
-    - Successfully created %warp.
-  RemoveWarp:
-    Self:
-    - Successfully removed %warp.
-  Time:
-    Self:
-    - It's %time.
-  SetTime:
-    Self:
-    - You set the time to %time.
-    FromOther:
-    - '%sender set the time to %time.'
-  SunnyWeather:
-    Self:
-    - It's nice outside.
-    - Nice and dry.
-    - Not raining.
-  RainyWeather:
-    Self:
-    - Not so good.
-    - Pretty bad.
-    - Rainy and wet.
-  Thundering:
-    Self:
-    - It is %state thundering.
-  SetWeather:
-    Self:
-    - Weather set to %state.
-    FromOther:
-    - '%sender set the weather to %state.'
-  SetPrefix:
-    Self:
-    - 'Your prefix is now %new.'
-    ToOther:
-    - You changed %target's prefix to %new.
-    FromOther:
-    - '%sender changed your prefix to %new.'
-  SetSuffix:
-    Self:
-    - 'Your suffix is now %new.'
-    ToOther:
-    - You changed %target's suffix to %new.
-    FromOther:
-    - '%sender changed your suffix to %new.'
-  SetDisplayName:
-    Self:
-    - 'Your display name is now %new.'
-    ToOther:
-    - "You changed %target's display name to %new."
-    FromOther:
-    - '%sender changed your display name to %new.'
+    - "%target's join message is %current."
   CheckPrefix:
     Self:
     - 'Your prefix is %current.'
@@ -391,16 +50,55 @@ messages:
     - 'Your suffix is %current.'
     ToOther:
     - "%target's suffix is %current."
-  CheckDisplayName:
+  CheckThundering:
     Self:
-    - 'Your display name is %current.'
-    ToOther:
-    - "%target's display name is %current."
-  CheckJoinMessage:
+    - It is %state thundering.
+  CheckTime:
     Self:
-    - 'Your join message is %current.'
+    - It's %time.
+  CheckWalkSpeed:
+    Self:
+    - Your walk speed is %speed.
     ToOther:
-    - "%target's join message is %current."
+    - '%target''s walk speed is %speed.'
+  ClearDisplayName:
+    Self:
+    - Your display name has been cleared.
+    ToOther:
+    - You cleared %target's display name.
+    FromOther:
+    - '%sender cleared your display name.'
+  ClearEffects:
+    Self:
+    - You clear your chi.
+    ToOther:
+    - You erase the effects on %target.
+    FromOther:
+    - Your effects have been cleared by %sender.
+  ClearFlightSpeed:
+    Self:
+    - Your flight speed has been reset.
+    ToOther:
+    - You've reset the flight speed of %target.
+    FromOther:
+    - Your flight speed has been reset by %sender.
+  ClearInventory:
+    Self:
+    - Your inventory has been cleared.
+    ToOther:
+    - You cleared %player's inventory.
+    FromOther:
+    - '%sender has cleared your inventory.'
+  ClearJoinMessage:
+    Self:
+    - Your join message has been reset.
+    ToOther:
+    - You reset %player's join message.
+    FromOther:
+    - '%sender has reset your join message.'
+  ClearKit:
+    Self:
+    - Successfully deleted the %kit kit.
   ClearPrefix:
     Self:
     - Your prefix has been cleared.
@@ -415,19 +113,349 @@ messages:
     - You cleared %target's suffix.
     FromOther:
     - '%sender cleared your suffix.'
-  ClearDisplayName:
+  ClearWalkSpeed:
     Self:
-    - Your display name has been cleared.
+    - Your walk speed has been reset.
     ToOther:
-    - You cleared %target's display name.
+    - You've reset the walk speed of %target.
     FromOther:
-    - '%sender cleared your display name.'
+    - Your walk speed has been reset by %sender.
+  ClearWarp:
+    Self:
+    - Successfully removed %warp.
+  CreateKit:
+    Self:
+    - Successfully made the %kit kit.
+  CreateWarp:
+    Self:
+    - Successfully created %warp.
+  EditKit:
+    Self:
+    - Successfully edited the %kit kit.
+  EditWarp:
+    Self:
+    - Successfully edited %warp.
+  Frozen:
+    Self:
+    - You are frozen, today (%duration)!
+    ToOther:
+    - You froze %target %duration.
+    FromOther:
+    - '%sender froze you %duration.'
+  GeneralFailure:
+    Self:
+    - Failed.
+    - An error occurred while you were doing whatever it is you were doing.
+  GiveEffect:
+    Self:
+    - You give yourself %effect for %duration.
+    - Prepare for %duration of %effect!
+    ToOther:
+    - You give %target %duration of %effect.
+    FromOther:
+    - '%sender gives you %effect for %duration.'
+  GiveItem:
+    Self:
+    - You've been given one %item.
+    ToOther:
+    - You've given one %item to %target.
+    FromOther:
+    - '%sender has given you one %item.'
+  GiveItems:
+    Self:
+    - You've been given %amount %item.
+    ToOther:
+    - You've given %amount %item to %target.
+    FromOther:
+    - '%sender has given you %amount %item.'
+  GiveKit:
+    Self:
+    - You've been given the %kit kit.
+    ToOther:
+    - You've given the %kit kit to %target.
+    FromOther:
+    - '%sender has given you the %kit kit.'
+  GodDisabled:
+    Self:
+    - Your god-like powers are gone, b0ss.
+    ToOther:
+    - You turned off %player's god-mode.
+    FromOther:
+    - '%sender turned off your god-mode.'
+  GodEnabled:
+    Self:
+    - You have become god-like!
+    - You have enabled god-mode!
+    ToOther:
+    - You turned on %player's god-mode.
+    FromOther:
+    - '%sender turned on your god-mode.'
+  Head:
+    Self:
+    - Given the head of %player.
+    ToOther:
+    - Gave the head of %player to %target.
+    FromOther:
+    - '%sender sent you the head of %player.'
+  HeadSelf:
+    Self:
+    - Given your own head.
+    ToOther:
+    - Sent %target his/her own head.
+    FromOther:
+    - '%sender sent you your own head.'
+  Healed:
+    Self:
+    - You've been healed.
+    ToOther:
+    - You healed %player.
+    FromOther:
+    - '%sender healed you.'
+  InvalidAmount:
+    Self:
+    - Invalid amount!
+  InvalidItem:
+    Self:
+    - Invalid item!
+  Kick:
+    Self:
+    - What m8
+    ToOther:
+    - You kicked %target %reason.
+    FromOther:
+    - '%sender kicked %target %reason.'
+  Kill:
+    Self:
+    - Goodbye, cruel world...
+    ToOther:
+    - You just killed %target!
+    FromOther:
+    - You were killed by %sender.
+  MakeDrunk:
+    Self:
+    - You drink yourself silly.
+    - That wasn't fruit punch!
+    ToOther:
+    - Wait, what'd you put into %target's drink?
+    FromOther:
+    - You feel weird. It was probably %sender...
+  MakeSober:
+    Self:
+    - You sober yourself right up.
+    ToOther:
+    - You give %target a blood transfusion. With nice, clean blood.
+    FromOther:
+    - '%sender somehow removes the alcohol from your veins.'
+  Mute:
+    Self:
+    - You stuff a sock in your mouth.
+    ToOther:
+    - You muted %target.
+    FromOther:
+    - You were muted by %sender.
+  NoConsole:
+    Self:
+    - Hitler coded nothing wrong!
+    - You fool!
+    - Consoles aren't real people!
+    - You foolish console peasant!
   NoHelp:
     Self:
     - No such help entry! Try /help topics!
+  NoPlayer:
+    Self:
+    - No such player!
+    - Ain't nobody with a name like that!
+  Ping:
+    Self:
+    - Pong!
+    - Yes, we can hear you.
+    - Yo, bro(/sis).
+  RainyWeather:
+    Self:
+    - Not so good.
+    - Pretty bad.
+    - Rainy and wet.
   Reload:
     Self:
     - Plugin reloaded.
+  Rocket:
+    Self:
+    - You launched yourself into the air %power.  Great.
+    ToOther:
+    - You launched %target into the air %power.
+    FromOther:
+    - '%sender launched you into the air %power.'
+  SendHome:
+    Self:
+    - Returned home.
+    ToOther:
+    - Sent %target home.
+    FromOther:
+    - Returned home by %sender.
+  SendSpawn:
+    Self:
+    - You returned to spawn.
+    ToOther:
+    - You returned %target to spawn.
+    FromOther:
+    - '%sender returned you to spawn.'
+  SetBuildMode:
+    Self:
+    - Your Build-Mode is now %state.
+    ToOther:
+    - '%target''s Build-Mode is now %state.'
+    FromOther:
+    - '%sender has set your Build-Mode to %state.'
+  SetDisplayName:
+    Self:
+    - 'Your display name is now %new.'
+    ToOther:
+    - "You changed %target's display name to %new."
+    FromOther:
+    - '%sender changed your display name to %new.'
+  SetFlightOff:
+    Self:
+    - You can no longer fly.
+    ToOther:
+    - '%target can no longer fly.'
+    FromOther:
+    - '%sender has disabled your flight!'
+  SetFlightOn:
+    Self:
+    - You can now fly!
+    ToOther:
+    - '%target can now fly!'
+    FromOther:
+    - '%sender has enabled your flight!'
+  SetFlightSpeed:
+    Self:
+    - Your flight speed was set to %speed.
+    ToOther:
+    - '%target''s flight speed was set to %speed.'
+    FromOther:
+    - Your flight speed was set to %speed by %sender."
+  SetHome:
+    Self:
+    - Home set.
+  SetJoinMessage:
+    Self:
+    - 'Your join message is now %new.'
+    ToOther:
+    - You changed %target's join message to %new.
+    FromOther:
+    - '%sender changed your join message to %new.'
+  SetPrefix:
+    Self:
+    - 'Your prefix is now %new.'
+    ToOther:
+    - You changed %target's prefix to %new.
+    FromOther:
+    - '%sender changed your prefix to %new.'
+  SetSuffix:
+    Self:
+    - 'Your suffix is now %new.'
+    ToOther:
+    - You changed %target's suffix to %new.
+    FromOther:
+    - '%sender changed your suffix to %new.'
+  SetTime:
+    Self:
+    - You set the time to %time.
+    FromOther:
+    - '%sender set the time to %time.'
+  SetWalkSpeed:
+    Self:
+    - Your walk speed was set to %speed.
+    ToOther:
+    - '%target''s walk speed was set to %speed.'
+    FromOther:
+    - Your walk speed was set to %speed by %sender."
+  SetWeather:
+    Self:
+    - Weather set to %state.
+    FromOther:
+    - '%sender set the weather to %state.'
+  Shock:
+    Self:
+    - By the power of Greyskull!
+    - I have the power!
+    ToOther:
+    - You shocked %target.
+    FromOther:
+    - '%sender shocked you.'
+  Slap:
+    Self:
+    - You slap yourself, fruitlessly.
+    ToOther:
+    - You slapped %target.
+    FromOther:
+    - You've been slapped by %sender.
+  SpawnMob:
+    Self:
+    - You spawned %amount %mob(s).
+  SunnyWeather:
+    Self:
+    - It's nice outside.
+    - Nice and dry.
+    - Not raining.
+  TeleportCall:
+    ToOther:
+    - You called %target to yourself.
+    FromOther:
+    - '%sender called you to him/her.  §3/tpaccept §6to accept.'
+  TeleportDeny:
+    Self:
+    - Teleport denied.
+  TeleprivacyHigh:
+    Self:
+    - Teleport requests will now be ignored.
+  TeleprivacyLow:
+    Self:
+    - You will now recieve teleport requests.
+  TeleprivacyOff:
+    Self:
+    - Anyone can teleport to you without request.
+  TeleportRequest:
+    ToOther:
+    - You requested a teleport to %target.
+    FromOther:
+    - '%sender requested a teleport to you. §3/tpaccept §6to accept.'
+  Teleport:
+    Self:
+    - You teleported to %destination.
+    ToOther:
+    - You teleported %target to %destination.
+    FromOther:
+    - '%sender teleported you to %destination.'
+  Unblind:
+    Self:
+    - You unblind yourself.
+    ToOther:
+    - You unblind %target.
+    FromOther:
+    - '%sender has unblinded you.'
+  Unfrozen:
+    Self:
+    - You break free of your own power! AAAAA!
+    ToOther:
+    - You unfroze %target.
+    FromOther:
+    - '%sender unfroze you.'
+  Unmute:
+    Self:
+    - You unmute yourself.
+    ToOther:
+    - You unmuted %target.
+    FromOther:
+    - You were unmuted by %sender.
   Version:
     Self:
     - 'Plugin version: %version.'
+  Warp:
+    Self:
+    - You warped to %warp.
+    ToOther:
+    - You sent %target to %warp.
+    FromOther:
+    - You were warped to %warp by %sender.

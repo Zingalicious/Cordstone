@@ -44,10 +44,18 @@ public final class MessageUtil
 	
 	public static void sendMessage(ZingPlugin plugin, CommandSender sender, String message)
 	{
+		if(sender == null)
+		{
+			return;
+		}
 		sender.sendMessage(plugin.nameColour + "[" + plugin.name + "] " + plugin.textColour + message);
 	}
 	public static void sendError(ZingPlugin plugin, CommandSender sender, String message)
 	{
+		if(sender == null)
+		{
+			return;
+		}
 		sender.sendMessage(ChatColor.DARK_RED + "[" + plugin.name + "] " + ChatColor.RED + message);
 	}
 }

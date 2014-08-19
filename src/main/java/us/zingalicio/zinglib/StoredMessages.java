@@ -7,85 +7,87 @@ import us.zingalicio.zinglib.plugin.ZingPlugin;
 
 public enum StoredMessages 
 {
-	GENERAL_FAILURE("GeneralFailure"),
-	NO_CONSOLE("NoConsole"),
 	BANNED("Banned"), //%target %reason
-	KICKED("Kicked"), //%target %reason
-	BIOME("Biome"), //%biome
-	SET_BUILD_MODE("BuildMode"), //%state
-	BUTCHER("Butcher"), //%number
-	SET_FLIGHT_ON("FlightOn"),
-	SET_FLIGHT_OFF("FlightOff"),
-	SET_FLIGHT_SPEED("FlightSpeed"), //%speed
-	SET_WALK_SPEED("WalkSpeed"), //%speed
-	CHECKED_FLIGHT_SPEED("CheckFlightSpeed"), //%speed
-	CHECKED_WALK_SPEED("CheckWalkSpeed"), //%speed
-	GIVEN_ITEM("GiveOne"), //%item
-	GIVEN_ITEMS("GiveMany"), //%item %amount
-	CLEARED_INVENTORY("Clear"),
-	GIVEN_KIT("Kit"), //%kit
-	EDITED_KIT("EditKit"), //%kit
-	CREATED_KIT("CreateKit"), //%kit
-	REMOVED_KIT("RemoveKit"), //%kit
-	HEAD("Head"), //%player
-	HEAD_SELF("HeadSelf"),
-	SENT_HOME("Home"),
-	SET_HOME("SetHome"),
-	GOD_MODE_ENABLED("GodEnabled"),
-	GOD_MODE_DISABLED("GodDisabled"),
-	HEALED("Healed"),
-	INVALID_ITEM("InvalidItem"),
-	INVALID_AMOUNT("InvalidAmount"),
-	NO_PLAYER("NoPlayer"),
-	PING("Ping"), //%sender
-	ROCKETED("Rocket"), //%power
-	SLAPPED("Slap"), //%power
-	FROZEN("Frozen"), //%duration
-	UNFROZEN("Unfrozen"),
-	SHOCKED("Shock"),
-	MADE_DRUNK("Drunk"), //%duration
-	MADE_SOBER("Sober"),
-	GIVEN_EFFECT("Effect"), //%effect %duration
-	CLEARED_EFFECTS("ClearedEffects"), 
 	BLINDED("Blind"), //%duration
-	UNBLINDED("Unblind"),
-	MUTED("Mute"), //%duration
-	UNMUTED("Unmute"),
-	KILLED("Kill"),
-	SENT_TO_SPAWN("Spawn"), 
-	SPAWNED_MOB("SpawnMob"), //%mob
-	TELEPORTED("Teleport"), //%destination
-	TELEPORT_REQUEST("TeleportRequest"),
-	TELEPORT_CALL("TeleportCall"),
-	TELEPORT_PRIVACY_OFF("TeleprivacyOff"),
-	TELEPORT_PRIVACY_LOW("TeleprivacyLow"),
-	TELEPORT_PRIVACY_HIGH("TeleprivacyHigh"),
-	TELEPORT_DENIED("TeleportDenied"), //%reason
-	WARPED("Warp"), //%warp
-	EDITED_WARP("EditWarp"), //%warp
-	CREATED_WARP("CreateWarp"), //%warp
-	REMOVED_WARP("RemoveWarp"), //%warp
-	TIME("Time"), //%time
-	SET_TIME("SetTime"), //%time
-	SUNNY_WEATHER("SunnyWeather"),
-	RAINY_WEATHER("RainyWeather"),
-	THUNDERING("Thundering"), //%state
-	SET_WEATHER("SetWeather"), //%state
-	SET_PREFIX("SetPrefix"), //%new
-	SET_SUFFIX("SetSuffix"), //%new
-	SET_DISPLAY_NAME("SetDisplayName"), //%new
-	SET_JOIN_MESSAGE("SetJoinMessage"), //%new
+	BUTCHERED("Butcher"), //%number
+	CHECKED_BIOME("CheckBiome"), //%biome
+	CHECKED_DISPLAY_NAME("CheckDisplayName"), //%current
+	CHECKED_FLIGHT_SPEED("CheckFlightSpeed"), //%speed
+	CHECKED_JOIN_MESSAGE("CheckJoinMessage"), //%current
 	CHECKED_PREFIX("CheckPrefix"), //%current
 	CHECKED_SUFFIX("CheckSuffix"), //%current
-	CHECKED_DISPLAY_NAME("CheckDisplayName"), //%current
-	CHECKED_JOIN_MESSAGE("CheckJoinMessage"), //%current
+	CHECKED_THUNDERING("CheckThundering"), //%state
+	CHECKED_TIME("CheckTime"), //%time
+	CHECKED_WALK_SPEED("CheckWalkSpeed"), //%speed
+	CLEARED_DISPLAY_NAME("ClearDisplayName"),
+	CLEARED_EFFECTS("ClearEffects"), 
+	CLEARED_FLIGHT_SPEED("ClearFlightSpeed"),
+	CLEARED_INVENTORY("ClearInventory"),
+	CLEARED_JOIN_MESSAGE("ClearJoinMessage"),
+	CLEARED_KIT("ClearKit"), //%kit
 	CLEARED_PREFIX("ClearPrefix"),
 	CLEARED_SUFFIX("ClearSuffix"),
-	CLEARED_DISPLAY_NAME("ClearDisplayName"),
-	CLEARED_JOIN_MESSAGE("ClearJoinMessage"),
+	CLEARED_WALK_SPEED("ClearWalkSpeed"),
+	CLEARED_WARP("ClearWarp"), //%warp
+	CREATED_KIT("CreateKit"), //%kit
+	CREATED_WARP("CreateWarp"), //%warp
+	EDITED_KIT("EditKit"), //%kit
+	EDITED_WARP("EditWarp"), //%warp
+	FROZEN("Frozen"), //%duration
+	GENERAL_FAILURE("GeneralFailure"),
+	GIVEN_EFFECT("GiveEffect"), //%effect %duration
+	GIVEN_ITEM("GiveItem"), //%item
+	GIVEN_ITEMS("GiveItems"), //%item %amount
+	GIVEN_KIT("GiveKit"), //%kit
+	GOD_MODE_DISABLED("GodDisabled"),
+	GOD_MODE_ENABLED("GodEnabled"),
+	HEAD("Head"), //%player
+	HEAD_SELF("HeadSelf"),
+	HEALED("Healed"),
+	INVALID_AMOUNT("InvalidAmount"),
+	INVALID_ITEM("InvalidItem"),
+	KICKED("Kick"), //%target %reason
+	KILLED("Kill"),
+	MADE_DRUNK("MakeDrunk"), //%duration
+	MADE_SOBER("MakeSober"),
+	MUTED("Mute"), //%duration
+	NO_CONSOLE("NoConsole"),
 	NO_HELP("NoHelp"),
+	NO_PLAYER("NoPlayer"),
+	PING("Ping"), //%sender
+	RAINY_WEATHER("RainyWeather"),
 	RELOADED("Reload"),
-	VERSION("Version"); //%version
+	ROCKETED("Rocket"), //%power
+	SENT_HOME("SendHome"),
+	SENT_TO_SPAWN("SendSpawn"), 
+	SET_BUILD_MODE("SetBuildMode"), //%state
+	SET_DISPLAY_NAME("SetDisplayName"), //%new
+	SET_FLIGHT_OFF("SetFlightOff"),
+	SET_FLIGHT_ON("SetFlightOn"),
+	SET_FLIGHT_SPEED("SetFlightSpeed"), //%speed
+	SET_HOME("SetHome"),
+	SET_JOIN_MESSAGE("SetJoinMessage"), //%new
+	SET_PREFIX("SetPrefix"), //%new
+	SET_SUFFIX("SetSuffix"), //%new
+	SET_TIME("SetTime"), //%time
+	SET_WALK_SPEED("SetWalkSpeed"), //%speed
+	SET_WEATHER("SetWeather"), //%state
+	SHOCKED("Shock"),
+	SLAPPED("Slap"), //%power
+	SPAWNED_MOB("SpawnMob"), //%mob
+	SUNNY_WEATHER("SunnyWeather"),
+	TELEPORT_CALLED("TeleportCall"),
+	TELEPORT_DENIED("TeleportDeny"), //%reason
+	TELEPORT_PRIVACY_HIGH("TeleprivacyHigh"),
+	TELEPORT_PRIVACY_LOW("TeleprivacyLow"),
+	TELEPORT_PRIVACY_OFF("TeleprivacyOff"),
+	TELEPORT_REQUESTED("TeleportRequest"),
+	TELEPORTED("Teleport"), //%destination
+	UNBLINDED("Unblind"),
+	UNFROZEN("Unfrozen"),
+	UNMUTED("Unmute"),
+	VERSION("Version"), //%version
+	WARPED("Warp"); //%warp
 	
 	String s;
 	
