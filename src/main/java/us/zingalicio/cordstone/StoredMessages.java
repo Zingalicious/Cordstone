@@ -1,9 +1,13 @@
-package us.zingalicio.zinglib;
+package us.zingalicio.cordstone;
 
 import java.util.List;
 import java.util.Random;
 
-import us.zingalicio.zinglib.plugin.ZingPlugin;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+
+import us.zingalicio.cordstone.ZingPlugin;
+import us.zingalicio.cordstone.util.NameUtil;
 
 public enum StoredMessages 
 {
@@ -105,22 +109,22 @@ public enum StoredMessages
 		}
 		return messageList.get(new Random().nextInt(messageList.size()));
 	}	
-	public String fromMessage(ZingPlugin plugin)
+	public String fromMessage(ZingPlugin plugin, CommandSender from)
 	{
 		List<String> messageList = plugin.getMessages().getStringList("messages." + this.s + ".FromOther");
 		if(messageList == null || messageList.size() == 0)
 		{
 			return "No Message Found";
 		}
-		return messageList.get(new Random().nextInt(messageList.size()));
+		return messageList.get(new Random().nextInt(messageList.size())).replace("%sender", NameUtil.getSenderName(from));
 	}	
-	public String toMessage(ZingPlugin plugin)
+	public String toMessage(ZingPlugin plugin, Player to)
 	{
 		List<String> messageList = plugin.getMessages().getStringList("messages." + this.s + ".ToOther");
 		if(messageList == null || messageList.size() == 0)
 		{
 			return "No Message Found";
 		}
-		return messageList.get(new Random().nextInt(messageList.size()));
+		return messageList.get(new Random().nextInt(messageList.size())).replace("%target", to.getDisplayName());
 	}
 }

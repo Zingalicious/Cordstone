@@ -1,4 +1,4 @@
-package us.zingalicio.zinglib.util;
+package us.zingalicio.cordstone.util;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;

@@ -1,4 +1,4 @@
-package us.zingalicio.zinglib.util;
+package us.zingalicio.cordstone.util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +9,30 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.material.MaterialData;
 
-import us.zingalicio.zinglib.plugin.ZingPlugin;
+import us.zingalicio.cordstone.ZingPlugin;
 
 public class NameUtil
 {	
+	public static Material getMaterial(ZingPlugin plugin, String name)
+	{
+		YamlConfiguration materials = plugin.getMaterials();
+		if(materials.contains("lookup." + name))
+		{
+			return Material.getMaterial(materials.getString("lookup." + name));
+		}
+		else
+		{
+			try
+			{
+				return Material.getMaterial(name);
+			}
+			catch(Exception ex)
+			{
+				return null;
+			}
+		}
+	}
+	
 	@SuppressWarnings("deprecation")
 	public static MaterialData getMaterialData(ZingPlugin plugin, Material material, String name)
 	{
@@ -33,8 +53,25 @@ public class NameUtil
 		}
 	}
 	
+	public static String getName(ZingPlugin plugin, Material material)
+	{
+		YamlConfiguration materials = plugin.getMaterials();
+		if(materials.contains("blocks." + material.name() + ".name"))
+		{
+			return materials.getString("blocks." + material.name() + ".name");
+		}
+		else if(materials.contains("items." + material.name() + ".name"))
+		{
+			return materials.getString("items." + material.name() + ".name");
+		}
+		else
+		{
+			return format(material.name());
+		}
+	}
+	
 	@SuppressWarnings("deprecation")
-	public static String getMaterialName(ZingPlugin plugin, MaterialData data)
+	public static String getDataName(ZingPlugin plugin, MaterialData data)
 	{
 		Material material = data.getItemType();
 		YamlConfiguration materials = plugin.getMaterials();
@@ -53,48 +90,12 @@ public class NameUtil
 			return null;
 		}
 	}
-	
-	public static Material getMaterial(ZingPlugin plugin, String name)
-	{
-		YamlConfiguration materials = plugin.getMaterials();
-		if(materials.contains("lookup." + name))
-		{
-			return Material.getMaterial(materials.getString("lookup." + name));
-		}
-		else
-		{
-			try
-			{
-				return Material.getMaterial(name);
-			}
-			catch(Exception ex)
-			{
-				return null;
-			}
-		}
-	}
 
-	public static String getName(ZingPlugin plugin, Material material)
-	{
-		YamlConfiguration materials = plugin.getMaterials();
-		if(materials.contains("blocks." + material.name() + ".name"))
-		{
-			return materials.getString("blocks." + material.name() + ".name");
-		}
-		else if(materials.contains("items." + material.name() + ".name"))
-		{
-			return materials.getString("items." + material.name() + ".name");
-		}
-		else
-		{
-			return format(material.name());
-		}
-	}
 	
 	public static String getFullName(ZingPlugin plugin, Material material, MaterialData data)
 	{
 		String dataName;
-		if((dataName = getMaterialName(plugin, data)) != null)
+		if((dataName = getDataName(plugin, data)) != null)
 		{
 			return getName(plugin, material) + ":" + dataName;
 		}

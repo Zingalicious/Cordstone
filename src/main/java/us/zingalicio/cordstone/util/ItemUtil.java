@@ -1,4 +1,4 @@
-package us.zingalicio.zinglib.util;
+package us.zingalicio.cordstone.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,8 +21,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import us.zingalicio.zinglib.util.NumberUtil;
-import us.zingalicio.zinglib.plugin.ZingPlugin;
+import us.zingalicio.cordstone.ZingPlugin;
 
 public class ItemUtil 
 {	

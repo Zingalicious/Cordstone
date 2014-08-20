@@ -1,9 +1,9 @@
-package us.zingalicio.zinglib.util;
+package us.zingalicio.cordstone.util;
 
 import org.bukkit.Material;
 import org.bukkit.Sound;
 
-import us.zingalicio.zinglib.plugin.ZingPlugin;
+import us.zingalicio.cordstone.ZingPlugin;
 
 public class SoundUtil
 {

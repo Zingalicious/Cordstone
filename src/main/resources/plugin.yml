@@ -1,10 +1,10 @@
-main: us.zingalicio.zinglib.ZingLib
-name: ZingLib
+main: us.zingalicio.cordstone.Cordstone
+name: Cordstone
 version: ${project.version}
 description: ${project.description}
 depends: [PermissionsEx, PowerNBT]
 author: zingten11
 database: false
 commands:
-  zinglib:
-    aliases: [zl]
+  cordstone:
+    aliases: [cs]

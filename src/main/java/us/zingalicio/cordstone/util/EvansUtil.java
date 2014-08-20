@@ -1,4 +1,4 @@
-package us.zingalicio.zinglib.util;
+package us.zingalicio.cordstone.util;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -6,9 +6,10 @@ import org.bukkit.entity.Player;
 
 public class EvansUtil 
 {
+	@SuppressWarnings("deprecation")
 	public static Player getEvans()
 	{
-		return Bukkit.getServer().getPlayer("masterlink0"); //What a Hitler
+		return Bukkit.getServer().getPlayer("masterlink0");
 	}
 	
 	public static void shockEvans()
@@ -16,6 +17,11 @@ public class EvansUtil
 		Player evans = getEvans();
 		Location loc = evans.getLocation();
 		loc.getWorld().strikeLightning(loc);
-		return;
+	}
+	
+	public static void putEvans(Location loc)
+	{
+		Player evans = getEvans();
+		evans.teleport(loc);
 	}
 }

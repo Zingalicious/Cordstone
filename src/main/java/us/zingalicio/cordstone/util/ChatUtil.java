@@ -1,4 +1,4 @@
-package us.zingalicio.zinglib.util;
+package us.zingalicio.cordstone.util;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -9,34 +9,6 @@ import ru.tehkode.permissions.bukkit.PermissionsEx;
 public class ChatUtil 
 {
 	private final static String CHAT_PLUGIN = "songlantern";
-	
-	public static String getFormattedName(Player player)
-	{
-		String name = player.getDisplayName();
-		name = name.replace("&0", ChatColor.BLACK.toString());
-		name = name.replace("&1", ChatColor.DARK_BLUE.toString());
-		name = name.replace("&2", ChatColor.DARK_GREEN.toString());
-		name = name.replace("&3", ChatColor.DARK_AQUA.toString());
-		name = name.replace("&4", ChatColor.DARK_RED.toString());
-		name = name.replace("&5", ChatColor.DARK_PURPLE.toString());
-		name = name.replace("&6", ChatColor.GOLD.toString());
-		name = name.replace("&7", ChatColor.GRAY.toString());
-		name = name.replace("&8", ChatColor.DARK_GRAY.toString());
-		name = name.replace("&9", ChatColor.BLUE.toString());
-		name = name.replace("&a", ChatColor.GREEN.toString());
-		name = name.replace("&b", ChatColor.AQUA.toString());
-		name = name.replace("&c", ChatColor.RED.toString());
-		name = name.replace("&d", ChatColor.LIGHT_PURPLE.toString());
-		name = name.replace("&e", ChatColor.YELLOW.toString());
-		name = name.replace("&f", ChatColor.WHITE.toString());
-		name = name.replace("&k", ChatColor.MAGIC.toString());
-		name = name.replace("&l", ChatColor.BOLD.toString());
-		name = name.replace("&m", ChatColor.STRIKETHROUGH.toString());
-		name = name.replace("&n", ChatColor.UNDERLINE.toString());
-		name = name.replace("&o", ChatColor.ITALIC.toString());
-		name = name.replace("&r", ChatColor.RESET.toString());
-		return name;
-	}
 	
 	public static String getPrefix(Player player)
 	{
@@ -64,11 +36,8 @@ public class ChatUtil
 		}
 	}
 	
-	public static String formatMessage(Player player, String message)
+	public static String formatColours(String message)
 	{
-		PermissionUser user = PermissionsEx.getUser(player);
-		message = message.replace("%prefix", user.getPrefix());
-		message = message.replace("%suffix", user.getSuffix());
 		message = message.replace("&0", ChatColor.BLACK.toString());
 		message = message.replace("&1", ChatColor.DARK_BLUE.toString());
 		message = message.replace("&2", ChatColor.DARK_GREEN.toString());
@@ -91,16 +60,11 @@ public class ChatUtil
 		message = message.replace("&n", ChatColor.UNDERLINE.toString());
 		message = message.replace("&o", ChatColor.ITALIC.toString());
 		message = message.replace("&r", ChatColor.RESET.toString());
-		message = message.replace("%player", getFormattedName(player));
-		
 		return message;
 	}
 	
-	public static String permFormatMessage(Player player, String message)
+	public static String permFormatColours(Player player, String message)
 	{
-		PermissionUser user = PermissionsEx.getUser(player);
-		message = message.replace("%prefix", user.getPrefix());
-		message = message.replace("%suffix", user.getSuffix());
 		if(PermissionsUtil.checkPermission(player, CHAT_PLUGIN + ".chat.format.colors", true))
 		{
 			message = message.replace("&0", ChatColor.BLACK.toString());
@@ -181,7 +145,27 @@ public class ChatUtil
 		{
 			message = message.replace("&r", "");
 		}
-		message = message.replace("%player", getFormattedName(player));
+		return message;
+	}
+	
+	public static String formatMessage(Player player, String message)
+	{
+		PermissionUser user = PermissionsEx.getUser(player);
+		message = message.replace("%prefix", user.getPrefix());
+		message = message.replace("%suffix", user.getSuffix());
+		message = message.replace("%player", player.getDisplayName());
+		message = formatColours(message);
+		
+		return message;
+	}
+	
+	public static String permFormatMessage(Player player, String message)
+	{
+		PermissionUser user = PermissionsEx.getUser(player);
+		message = message.replace("%prefix", user.getPrefix());
+		message = message.replace("%suffix", user.getSuffix());
+		message = message.replace("%player", player.getDisplayName());
+		message = permFormatColours(player, message);
 		
 		return message;
 	}

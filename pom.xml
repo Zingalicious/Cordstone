@@ -1,16 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>us.zingalicio</groupId>
-  <artifactId>ZingLib</artifactId>
-  <version>0.1.0</version>
-  <name>ZingLib</name>
+  <artifactId>Cordstone</artifactId>
+  <version>0.1.1</version>
+  <name>Cordstone</name>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
-        
-  <description>Zingalicious' Core Plugin</description>
+  <description>Zingalicious Test-Library</description>
+  
       <repositories>
         <repository>
             <id>bukkit-repo</id>
@@ -34,6 +34,7 @@
 	  </snapshots>
 	</repository>
     </repositories>
+    
       <dependencies>
       	<dependency>
       		<groupId>org.bukkit</groupId>
@@ -60,7 +61,7 @@
     </dependency>
       </dependencies>
       
-  <build>
+    <build>
         <resources>
             <resource>
                 <filtering>true</filtering>
@@ -111,5 +112,4 @@
       
     </plugins>
   </build>
-  
 </project>
