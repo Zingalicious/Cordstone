@@ -9,13 +9,13 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.material.MaterialData;
 
-import us.zingalicio.cordstone.ZingPlugin;
+import us.zingalicio.cordstone.Cordstone;
 
 public class NameUtil
 {	
-	public static Material getMaterial(ZingPlugin plugin, String name)
+	public static Material getMaterial(String name)
 	{
-		YamlConfiguration materials = plugin.getMaterials();
+		YamlConfiguration materials = Cordstone.getInstance().getMaterials();
 		if(materials.contains("lookup." + name))
 		{
 			return Material.getMaterial(materials.getString("lookup." + name));
@@ -34,9 +34,9 @@ public class NameUtil
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static MaterialData getMaterialData(ZingPlugin plugin, Material material, String name)
+	public static MaterialData getMaterialData(Material material, String name)
 	{
-		YamlConfiguration materials = plugin.getMaterials();
+		YamlConfiguration materials = Cordstone.getInstance().getMaterials();
 		if(materials.contains("blocks." + material.name() + ".names." + name))
 		{
 			MaterialData data = new MaterialData(material, Byte.parseByte(materials.getString("blocks." + material.name() + ".names." + name)));
@@ -53,9 +53,9 @@ public class NameUtil
 		}
 	}
 	
-	public static String getName(ZingPlugin plugin, Material material)
+	public static String getName(Material material)
 	{
-		YamlConfiguration materials = plugin.getMaterials();
+		YamlConfiguration materials = Cordstone.getInstance().getMaterials();
 		if(materials.contains("blocks." + material.name() + ".name"))
 		{
 			return materials.getString("blocks." + material.name() + ".name");
@@ -71,10 +71,10 @@ public class NameUtil
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static String getDataName(ZingPlugin plugin, MaterialData data)
+	public static String getDataName(MaterialData data)
 	{
 		Material material = data.getItemType();
-		YamlConfiguration materials = plugin.getMaterials();
+		YamlConfiguration materials = Cordstone.getInstance().getMaterials();
 		if(materials.contains("blocks." + material.name() + ".data." + data.getData()))
 		{
 			String name = materials.getString("blocks." + material.name() + ".data." + data.getData());
@@ -92,14 +92,14 @@ public class NameUtil
 	}
 
 	
-	public static String getFullName(ZingPlugin plugin, Material material, MaterialData data)
+	public static String getFullName(Material material, MaterialData data)
 	{
 		String dataName;
-		if((dataName = getDataName(plugin, data)) != null)
+		if((dataName = getDataName(data)) != null)
 		{
-			return getName(plugin, material) + ":" + dataName;
+			return getName(material) + ":" + dataName;
 		}
-		return getName(plugin, material);
+		return getName(material);
 	}
 	
 	public static String format(String s)

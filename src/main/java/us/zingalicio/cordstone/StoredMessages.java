@@ -100,27 +100,27 @@ public enum StoredMessages
 		this.s = s;
 	}
 	
-	public String selfMessage(ZingPlugin plugin)
+	public String selfMessage()
 	{
-		List<String> messageList = plugin.getMessages().getStringList("messages." + this.s + ".Self");
+		List<String> messageList = Cordstone.getInstance().getMessages().getStringList("messages." + this.s + ".Self");
 		if(messageList == null || messageList.size() == 0)
 		{
 			return "No Message Found";
 		}
 		return messageList.get(new Random().nextInt(messageList.size()));
 	}	
-	public String fromMessage(ZingPlugin plugin, CommandSender from)
+	public String fromMessage(CommandSender from)
 	{
-		List<String> messageList = plugin.getMessages().getStringList("messages." + this.s + ".FromOther");
+		List<String> messageList = Cordstone.getInstance().getMessages().getStringList("messages." + this.s + ".FromOther");
 		if(messageList == null || messageList.size() == 0)
 		{
 			return "No Message Found";
 		}
 		return messageList.get(new Random().nextInt(messageList.size())).replace("%sender", NameUtil.getSenderName(from));
 	}	
-	public String toMessage(ZingPlugin plugin, Player to)
+	public String toMessage(Player to)
 	{
-		List<String> messageList = plugin.getMessages().getStringList("messages." + this.s + ".ToOther");
+		List<String> messageList = Cordstone.getInstance().getMessages().getStringList("messages." + this.s + ".ToOther");
 		if(messageList == null || messageList.size() == 0)
 		{
 			return "No Message Found";

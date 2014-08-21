@@ -3,14 +3,15 @@ package us.zingalicio.cordstone.util;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 
+import us.zingalicio.cordstone.Cordstone;
 import us.zingalicio.cordstone.ZingPlugin;
 
 public class SoundUtil
 {
-	public static Sound getSound(Material material, ZingPlugin plugin)
+	public static Sound getSound(Material material)
 	{
 		String soundString;
-		if((soundString = plugin.getMaterials().getString("blocks." + material.name() + ".sound")) != null)
+		if((soundString = Cordstone.getInstance().getMaterials().getString("blocks." + material.name() + ".sound")) != null)
 		{
 			return Sound.valueOf(soundString);
 		}

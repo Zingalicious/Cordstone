@@ -11,6 +11,7 @@ import us.zingalicio.cordstone.util.ConfigUtil;
 
 public class ZingPlugin extends JavaPlugin
 {
+	private static ZingPlugin instance;
 	protected final YamlConfiguration materials;
 	protected final YamlConfiguration messages;
 	protected final YamlConfiguration items;
@@ -61,6 +62,8 @@ public class ZingPlugin extends JavaPlugin
 		config = new YamlConfiguration();
 		ConfigUtil.saveDefault(this, configFile);
 		ConfigUtil.loadYaml(config, configFile);
+		
+		setInstance(this);
 	}
 
 	public File getConfigFile()
@@ -97,5 +100,14 @@ public class ZingPlugin extends JavaPlugin
 	public YamlConfiguration getMessages()
 	{
 		return messages;
+	}
+	private static void setInstance(ZingPlugin plugin)
+	{
+		instance = plugin;
+	}
+	
+	public static ZingPlugin getInstance()
+	{
+		return instance;
 	}
 }

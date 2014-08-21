@@ -21,13 +21,15 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import us.zingalicio.cordstone.Cordstone;
 import us.zingalicio.cordstone.ZingPlugin;
 
 public class ItemUtil 
 {	
 	@SuppressWarnings("deprecation")
-	public static ItemStack getItem(ZingPlugin plugin, String name)
+	public static ItemStack getItem(String name)
 	{
+		ZingPlugin plugin = Cordstone.getInstance();
 		ItemStack item;
 		YamlConfiguration items = plugin.getItems();
 		String itemKey = "items." + name.toLowerCase();
@@ -231,8 +233,9 @@ public class ItemUtil
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static byte saveItem(ZingPlugin plugin, ItemStack item, String name)
+	public static byte saveItem(ItemStack item, String name)
 	{
+		ZingPlugin plugin = Cordstone.getInstance();
 		String sectionString = "items." + name.toLowerCase();
 		if(plugin.getItems().contains(sectionString))
 		{
@@ -317,8 +320,9 @@ public class ItemUtil
 		}
 	}
 	
-	public static boolean deleteItem(ZingPlugin plugin, String name)
+	public static boolean deleteItem(String name)
 	{
+		ZingPlugin plugin = Cordstone.getInstance();
 		if(plugin.getItems().contains("items." + name.toLowerCase()))
 		{
 			plugin.getItems().set("items." + name.toLowerCase(), null);
