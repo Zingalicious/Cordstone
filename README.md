@@ -1,4 +1,4 @@
-ZingLib
+Cordstone
 =======
 
 Zingalicious' Core Plugin
