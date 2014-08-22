@@ -4461,7 +4461,7 @@ lookup:
   metaldoor: IRON_DOOR
   redstone: REDSTONE
   redstonedust: REDSTONE
-  snowball: SNOWBALL
+  snowball: SNOW_BALL
   boat: BOAT
   woodenboat: BOAT
   woodboat: BOAT

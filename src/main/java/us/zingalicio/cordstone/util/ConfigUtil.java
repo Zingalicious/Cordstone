@@ -8,6 +8,9 @@ import java.io.OutputStream;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import us.zingalicio.cordstone.Cordstone;
+import us.zingalicio.cordstone.ZingPlugin;
+
 public class ConfigUtil 
 {
 	public static void loadYaml(YamlConfiguration yaml, File file)
@@ -61,5 +64,13 @@ public class ConfigUtil
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	public static void reloadCommon()
+	{
+		ZingPlugin plugin = Cordstone.getInstance();
+		ConfigUtil.loadYaml(plugin.getItems(), plugin.getItemFile());
+		ConfigUtil.loadYaml(plugin.getMessages(), plugin.getMessageFile());
+		ConfigUtil.loadYaml(plugin.getMaterials(), plugin.getMaterialFile());
 	}
 }
