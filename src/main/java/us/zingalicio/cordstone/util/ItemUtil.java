@@ -381,4 +381,24 @@ public class ItemUtil
 		
 		return extra;
 	}
+	
+	public static Material toItem(Material mat)
+	{
+		YamlConfiguration materials = Cordstone.getInstance().getMaterials();
+		if(materials.contains("blockstoitems" + mat.name()))
+		{
+			mat = Material.getMaterial(materials.getString("blockstoitems" + mat.name()));
+		}
+		return mat;
+	}
+	
+	public static Material toBlock(Material mat)
+	{
+		YamlConfiguration materials = Cordstone.getInstance().getMaterials();
+		if(materials.contains("itemstoblocks" + mat.name()))
+		{
+			mat = Material.getMaterial(materials.getString("itemstoblocks" + mat.name()));
+		}
+		return mat;
+	}
 }
