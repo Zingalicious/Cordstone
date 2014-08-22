@@ -19,7 +19,9 @@ public class ChunkUtil
 			while(dZ <= radius)
 			{
 				chunks.add(new Location(loc.getWorld(), x + (dX * 16), 1, z + (dZ * 16)).getChunk());
+				dZ++;
 			}
+			dX++;
 		}
 		return chunks;
 	}
