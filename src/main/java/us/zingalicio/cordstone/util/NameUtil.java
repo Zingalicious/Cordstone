@@ -105,8 +105,8 @@ public class NameUtil
 	public static String getItemName(Material material, MaterialData data)
 	{
 		YamlConfiguration materials = Cordstone.getInstance().getMaterials();
-		if(materials.getConfigurationSection("blocks." + material.name() + ".names").getKeys(false).isEmpty()
-				&& materials.getConfigurationSection("items." + material.name() + ".names").getKeys(false).isEmpty())
+		if(materials.getConfigurationSection("blocks." + material.name() + ".names") == null
+				&& materials.getConfigurationSection("items." + material.name() + ".names") == null)
 		{
 			return getName(material);
 		}

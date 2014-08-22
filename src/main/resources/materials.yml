@@ -705,7 +705,7 @@ blocks:
       13: Inverted Stone Brick
       14: Inverted Nether Brick
       15: Inverted Quartz
-    name: Double Step
+    name: Step
   BRICK: 
     scroll:
     sound: DIG_STONE
