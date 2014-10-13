@@ -9,7 +9,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
-  <description>Zingalicious Test-Library</description>
+  <description>Zingalicious Library</description>
   
       <repositories>
         <repository>
@@ -24,6 +24,11 @@
         <id>dpohvar.ru</id>
         <name>dpohvar.ru-releases</name>
         <url>http://dpohvar.ru/artifactory/release</url>
+    </repository>
+    <repository>
+        <id>zingalicious</id>
+        <name>Zingalicious-Repo</name>
+        <url>http://zingalicio.us/repo</url>
     </repository>
 	<repository>
 	  <id>fanciful-mvn-repo</id>
