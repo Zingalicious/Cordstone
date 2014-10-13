@@ -6,7 +6,6 @@ import java.util.Random;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import us.zingalicio.cordstone.ZingPlugin;
 import us.zingalicio.cordstone.util.NameUtil;
 
 public enum StoredMessages 

@@ -4,7 +4,6 @@ import org.bukkit.Material;
 import org.bukkit.Sound;
 
 import us.zingalicio.cordstone.Cordstone;
-import us.zingalicio.cordstone.ZingPlugin;
 
 public class SoundUtil
 {
