@@ -9,21 +9,21 @@ blocks:
     scroll: [0,1,2,3,4,5,6]
     sound: DIG_STONE
     names:
-#      smooth: 0
-#      stone: 0
-#      granite: 1
-#      polishedgranite: 2
-#      diorite: 3
-#      polisheddiorite: 4
-#      andesite: 5
-#      polishedandesite: 6
+      smooth: 0
+      stone: 0
+      granite: 1
+      polishedgranite: 2
+      diorite: 3
+      polisheddiorite: 4
+      andesite: 5
+      polishedandesite: 6
     data:
-#      1: Granite
-#      2: Polished Granite
-#      3: Diorite
-#      4: Polished Diorite
-#      5: Andesite
-#      6: Polished Andesite
+      1: Granite
+      2: Polished Granite
+      3: Diorite
+      4: Polished Diorite
+      5: Andesite
+      6: Polished Andesite
     name: Stone
   GRASS: 
     scroll:
@@ -4768,3 +4768,38 @@ blockstoitems:
   CAULDRON: CAULDRON_ITEM
   SIGN_POST: SIGN
   WALL_SIGN: SIGN
+enchantments:
+  protection: PROTECTION_ENVIRONMENTAL
+  fireprotection: PROTECTION_FIRE
+  fallprotection: PROTECTION_FALL
+  featherfall: PROTECTION_FALL
+  featherfalling: PROTECTION_FALL
+  blastprotection: PROTECTION_EXPLOSION
+  explosionprotection: PROTECTION_EXPLOSION
+  projectileprotection: PROTECTION_PROJECTILE
+  respiration: OXYGEN
+  waterbreathing: OXYGEN
+  aquaaffinity: WATER_WORKER
+  thorns: THORNS
+#  depthstrider:
+  sharpness: DAMAGE_ALL
+  damage: DAMAGE_ALL
+  smite: DAMAGE_UNDEAD
+  baneofarthopods: DAMAGE_ARTHOPODS
+  baneofspiders: DAMAGE_ARTHOPODS
+  knockback: KNOCKBACK
+  fireaspect: FIRE_ASPECT
+  fire: FIRE_ASPECT
+  looting: LOOT_BONUS_MOBS
+  efficiency: DIG_SPEED
+  speed: DIG_SPEED
+  silktouch: SILK_TOUCH
+  unbreaking: DURABILITY
+  fortune: LOOT_BONUS_BLOCKS
+  power: ARROW_DAMAGE
+  punch: ARROW_KNOCKBACK
+  flame: ARROW_FIRE
+  infinity: ARROW_INFINITE
+  luckofthesea: LUCK
+  luck: LUCK
+  lure: LURE
